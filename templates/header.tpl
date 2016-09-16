@@ -30,7 +30,7 @@
 	<script language="javascript" type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 	<script language="javascript" type="text/javascript" src="/styles/main.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" rel="stylesheet"> 
-	<script type="text/javascript" src="masonry.js"></script>
+	<script type="text/javascript" src="styles/masonry.js"></script>
 	<link rel="stylesheet" href="css/main.css">
 
 	{if $js1}<script language="javascript" type="text/javascript" src="{$js1}"></script>{/if}
