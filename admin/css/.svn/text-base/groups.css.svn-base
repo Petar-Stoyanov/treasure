@@ -1,0 +1,63 @@
+.general_form span.textarea_wrapper {
+	height: 55px;
+}
+
+tr.hidden td a.group_name {
+	color: #aaa;
+	text-decoration: line-through;
+}
+
+tr.active td {
+	color: green;
+	font-weight: bold;
+}
+
+tr.old td {
+	color: #888;
+}
+
+.unhide {
+	background-image:url("layout/site/tables/undo.gif");
+}
+
+ul.sidebar_menu a.active {
+	font-weight: bold;
+}
+
+a.selected {
+	font-weight: bold;
+	color: #fff;
+	text-decoration: underline;
+}
+
+a#back_btn {
+	color:#FFFFFF;
+	float:right;
+	padding:10px 3px;
+	font-weight: bold;
+}
+
+.general_form label {
+	width: 120px;
+}
+
+.general_form .inputs {
+	width: 700px;
+}
+
+.general_form .textarea_wrapper, 
+.general_form .editor {
+	width: 700px;
+}
+
+.general_form .pic {
+	width: 230px;
+}
+
+div.thumb {
+	float: left;
+}
+
+tr.head th{
+	border-top: 1px solid #D3E5ED; 
+}

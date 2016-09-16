@@ -1,0 +1,57 @@
+.general_form span.textarea_wrapper {
+	height: 75px;
+}
+
+tr.hidden td a.product_name {
+	color: #aaa;
+	text-decoration: line-through;
+}
+
+.unhide {
+	background-image:url("layout/site/tables/undo.gif");
+}
+
+ul.sidebar_menu a.active {
+	font-weight: bold;
+}
+
+.general_form div.pic {
+	width: 250px;
+}
+
+.general_form .table_wrapper table.detail th {
+	border: 0;
+}
+
+#order_frm label, div.general_form label {
+	width: 150px;
+}
+
+.general_form span.short {
+	width: 75px;
+}
+
+
+.general_form table td input.small {
+	font-size: 11px;
+	color: #999;
+	border: 1px solid #777;
+	text-align: center;
+}
+
+.general_form table td input.link {
+	background: 0;
+	border: 0;
+	display: inline;
+	cursor: pointer;
+	color: #6B98A8;
+	outline: none;
+}
+
+.general_form table td input.link:hover {
+	text-decoration: underline;
+}
+
+.general_form table#actions td.error span {
+	width: 10px;
+}

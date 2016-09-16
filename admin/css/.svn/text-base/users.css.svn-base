@@ -1,0 +1,35 @@
+#addrFrm label {
+	width: 200px;
+}
+
+.general_form .input_wrapper {
+	width: 330px;
+}
+
+.general_form div.left .inputs {
+	width: 285px;
+}
+
+.general_form div.left, 
+.general_form div.right {
+	float: left;
+	overflow: auto;
+	width: 480px;
+}
+
+.general_form div.right {
+	width: 250px;
+}
+
+.general_form div.right .inputs {
+	width: 130px;
+}
+
+tr.hidden td a.product_name {
+	color: #aaa;
+	text-decoration: line-through;
+}
+
+.general_form .textarea_wrapper {
+	height: 75px;
+}

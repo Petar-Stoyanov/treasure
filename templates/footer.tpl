@@ -1,0 +1,53 @@
+		</section>
+		<footer>
+		      <ul class="footer-ul">
+		        <li class="footer-li">
+		          <a href="" class="footer-a">За проекта |</a>
+		        </li>
+		        <li class="footer-li">
+		          <a href="" class="footer-a">Екип |</a>
+		        </li>
+		        <li class="footer-li">
+		          <a href="" class="footer-a">Съмишленици |</a>
+		        </li>
+		        <li class="footer-li">
+		          <a href="" class="footer-a">Подкрепи каузата |</a>
+		        </li>
+		        <li class="footer-li">
+		          <a href="" class="footer-a">Контакти</a>
+		        </li>
+		      </ul>
+
+		      <ul class="footer-ul-2">
+		        <a href="">
+		          <li class="footer-li-2 li-2-1"></li>
+		        </a>
+		        <a href="">
+		          <li class="footer-li-2 li-2-2"></li>
+		        </a>
+		        <a href="">
+		          <li class="footer-li-2 li-2-3"></li>
+		        </a>
+		        <a href="">
+		          <li class="footer-li-2 li-2-4"></li>
+		        </a>
+		        <a href="">
+		          <li class="footer-li-2 li-2-5"></li>
+		        </a>  
+		      </ul>
+
+		      <!-- <span class="subscribe-span"></span> -->
+		      <img class="subscribe-img" src="img/subscribe.png" class="img-responsive" alt="footer logo"> 
+
+		      <span class="reserved">2016 Открий съкровището в Тръновско.</span>
+
+		      <p class="subscribe-p">Напишете вашият email адрес</p>
+
+		      <form action="demo_form.asp" class="subsrcibe-form">
+		        <input type="text" name="fname" class="subscribe-input"><br>
+		        <input type="submit" value="Submit" class="submit-btn">
+		      </form>
+		    </footer>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /admin
+Disallow: /_stat
+Disallow: /inc
+Disallow: /managers
+Disallow: /sql
+Disallow: /templates
+Disallow: /tmp

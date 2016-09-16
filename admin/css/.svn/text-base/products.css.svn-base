@@ -1,0 +1,108 @@
+.general_form span.textarea_wrapper {
+	height: 55px;
+}
+
+tr.hidden td a.product_name {
+	color: #aaa;
+	text-decoration: line-through;
+}
+
+tr.boutique td  {
+	background: #fcb0b0;
+
+}
+
+tr.active td {
+	color: green;
+	font-weight: bold;
+}
+
+tr.old td {
+	color: #888;
+}
+
+.unhide {
+	background-image:url("layout/site/tables/undo.gif");
+}
+
+ul.sidebar_menu a.active {
+	font-weight: bold;
+}
+
+a.selected {
+	font-weight: bold;
+	color: #fff;
+	text-decoration: underline;
+}
+
+a#back_btn {
+	color:#FFFFFF;
+	float:right;
+	padding:10px 3px;
+	font-weight: bold;
+}
+
+.general_form label {
+	width: 120px;
+}
+
+.general_form .inputs {
+	width: 700px;
+}
+
+.general_form .textarea_wrapper,
+.general_form .editor {
+	width: 700px;
+}
+
+.general_form .pic {
+	width: 230px;
+}
+
+div.thumb {
+	float: left;
+}
+
+tr.head th{
+	border-top: 1px solid #D3E5ED;
+}
+
+div.gal_cont {
+	float: left;
+	overflow: hidden;
+	margin-bottom: 10px;
+}
+
+div.gal_photo {
+	border: 1px solid #D3E5ED;
+	float: left;
+	height: 72px;
+	padding: 3px;
+	width: 72px;
+	overflow: hidden;
+	text-align: center;
+	vertical-align: middle;
+
+}
+
+span.prom_price {
+	text-decoration:line-through;
+}
+
+span.prom {
+	margin-left:130px;
+	margin-top:-30px;
+	position:absolute;
+}
+
+span.gooddeal {
+	margin-left:95px;
+	margin-top:-30px;
+	position:absolute;
+}
+
+span.bin_ends {
+	margin-left:60px;
+	margin-top:-30px;
+	position:absolute;
+}

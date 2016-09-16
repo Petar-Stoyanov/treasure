@@ -1,0 +1,69 @@
+.general_form span.textarea_wrapper {
+	height: 75px;
+}
+
+tr.hidden td a.product_name {
+	color: #aaa;
+	text-decoration: line-through;
+}
+
+.unhide {
+	background-image:url("layout/site/tables/undo.gif");
+}
+
+ul.sidebar_menu a.active {
+	font-weight: bold;
+}
+
+div.product {
+	border-bottom: 1px solid #CECECE;
+}
+
+div.product span.input_wrapper {
+	background: none;
+	border: none;
+}
+
+div.product span.image {
+	float: left;
+	margin-right: 20px;
+}
+
+
+div.product span.descr {
+	float: left;
+	font-style: italic;
+}
+
+input#act_price {
+	background: none;
+	border: none;
+	text-align: right;
+	font-weight: bold;
+	margin-right: 0;
+	border-bottom: 1px solid #cecece;
+	width: 100%;
+}
+
+span.input_wrapper input#disc_perc,
+span.input_wrapper input#disc_price {
+	text-align: right;
+}
+
+.general_form .pic {
+	width: 230px;
+}
+
+tr.head th{
+	border-top: 1px solid #D3E5ED; 
+}
+
+.general_form span.promos {
+	overflow: auto;
+	width: 99%;
+	height: 50px;
+}
+
+.general_form span.promos span.strike {
+ 	text-decoration: line-through;
+}
