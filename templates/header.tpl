@@ -19,7 +19,7 @@
 	<link rel='shortcut icon' type='image/x-icon' href='img/favicon.ico' />
 	<link href="{$_config.base_url}/favicon.ico" rel="SHORTCUT ICON">
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">	
-	<link rel="stylesheet" type="text/css" href="/styles/main.css" />
+	
 
 	{if $css1}<link href="{$css1}" rel="stylesheet" type="text/css" />{/if}
 	{if $css2}<link href="{$css2}" rel="stylesheet" type="text/css" />{/if}
@@ -27,12 +27,17 @@
 	{if $css4}<link href="{$css4}" rel="stylesheet" type="text/css" />{/if}
 	{if $css5}<link href="{$css5}" rel="stylesheet" type="text/css" />{/if}
 	<script language="javascript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	<script language="javascript" type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-	<script language="javascript" type="text/javascript" src="/styles/main.js"></script>
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" rel="stylesheet"> 
-	<script type="text/javascript" src="styles/masonry.js"></script>
-	<link rel="stylesheet" href="css/main.css">
 
+	<script language="javascript" type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+	<script language="javascript" type="text/javascript" src="/styles/main.js"></script>
+
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" rel="stylesheet">
+
+	<script type="text/javascript" src="styles/masonry.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="/styles/main.css" />
+	
 	{if $js1}<script language="javascript" type="text/javascript" src="{$js1}"></script>{/if}
 	{if $js2}<script language="javascript" type="text/javascript" src="{$js2}"></script>{/if}
 	{if $js3}<script language="javascript" type="text/javascript" src="{$js3}"></script>{/if}
@@ -70,12 +75,15 @@
 
 	    <div class="top-logo-wrapper">
 	      <span>
-	        <a href="" class="logo-one"></a>
+	        <!-- <a href="" class="logo-one"></a> -->
+	        <img src="img/logo-full.png" class="img-responsive floating-logo">
 	      </span>
 	      <span>
-	        <a href="" class="logo-two"></a>
+	        <!-- <a href="" class="logo-two"></a> -->
+	        <img src="img/middle-logo.png" class="img-responsive floating-logo-2">
 	      </span>
 	      <span>
-	        <a href="" class="logo-three"></a>
+	        <!-- <a href="" class="logo-three"></a> -->
+	        <img src="img/cys.png" class="img-responsive floating-logo-3">
 	      </span>
 	    </div>

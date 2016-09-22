@@ -1,4 +1,4 @@
-<?php require_once('/Users/petar/Documents/lenovo transfer/Projects/treasure/inc/Smarty/plugins/function.query_str.php'); $this->register_function("query_str", "tpl_function_query_str");  require_once('/Users/petar/Documents/lenovo transfer/Projects/treasure/inc/Smarty/plugins/block.capture.php'); $this->register_block("capture", "tpl_block_capture");  /* V2.10 Template Lite 4 January 2007  (c) 2005-2007 Mark Dickenson. All rights reserved. Released LGPL. 2016-09-16 13:03:46 EEST */ ?>
+<?php require_once('/Users/petar/Documents/lenovo transfer/Projects/treasure/inc/Smarty/plugins/function.query_str.php'); $this->register_function("query_str", "tpl_function_query_str");  require_once('/Users/petar/Documents/lenovo transfer/Projects/treasure/inc/Smarty/plugins/block.capture.php'); $this->register_block("capture", "tpl_block_capture");  /* V2.10 Template Lite 4 January 2007  (c) 2005-2007 Mark Dickenson. All rights reserved. Released LGPL. 2016-09-22 11:42:12 EEST */ ?>
 
 <?php $_templatelite_tpl_vars = $this->_vars;
 echo $this->_fetch_compile_include("templates/header.tpl", array());
@@ -16,7 +16,7 @@ unset($_templatelite_tpl_vars);
             <div class="side-menu-icon"></div>
           </div>
 
-          <div class="colapsable-uls">
+          <div class="colapsable-uls-hidden">
             <ul class="side-menu-ul">
               <li class="side-menu-ul-header-li">ВИДОВЕ ОБЕКТИ</li>
 
@@ -110,7 +110,8 @@ unset($_templatelite_tpl_vars);
           </div>
         </div>
 
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2933.4993014682145!2d23.393845514909447!3d42.671964723340494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa866bf688b389%3A0x7fde23760601550e!2z0LHRg9C7LiDigJ7QmNGB0LrRitGA0YHQutC-INGI0L7RgdC14oCcIDcsIDE1Mjgg0KHQvtGE0LjRjw!5e0!3m2!1sbg!2sbg!4v1455800730705" width="100%" height="1000" frameborder="0" style="border:0" allowfullscreen></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4062.3559569188005!2d25.61438989906971!3d43.077158379987075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40a9214b3d9491dd%3A0x400a01269bf5dc0!2z0JLQtdC70LjQutC-INCi0YrRgNC90L7QstC-!5e0!3m2!1sbg!2sbg!4v1474533632666" width="100%" height="800px%" frameborder="0" style="border:0" allowfullscreen></iframe>
+
       </div>
 
 <!-- END HOME HTML -->

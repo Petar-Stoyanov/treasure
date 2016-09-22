@@ -1,4 +1,4 @@
-<?php require_once('/Users/petar/Documents/lenovo transfer/Projects/treasure/inc/Smarty/plugins/function.query_str.php'); $this->register_function("query_str", "tpl_function_query_str");  require_once('/Users/petar/Documents/lenovo transfer/Projects/treasure/inc/Smarty/plugins/block.capture.php'); $this->register_block("capture", "tpl_block_capture");  /* V2.10 Template Lite 4 January 2007  (c) 2005-2007 Mark Dickenson. All rights reserved. Released LGPL. 2016-09-16 12:55:24 EEST */ ?>
+<?php require_once('/Users/petar/Documents/lenovo transfer/Projects/treasure/inc/Smarty/plugins/function.query_str.php'); $this->register_function("query_str", "tpl_function_query_str");  require_once('/Users/petar/Documents/lenovo transfer/Projects/treasure/inc/Smarty/plugins/block.capture.php'); $this->register_block("capture", "tpl_block_capture");  /* V2.10 Template Lite 4 January 2007  (c) 2005-2007 Mark Dickenson. All rights reserved. Released LGPL. 2016-09-22 11:02:51 EEST */ ?>
 
 <!DOCTYPE html>
 <html>
@@ -28,7 +28,7 @@
 	<link href="<?php echo $this->_vars['_config']['base_url']; ?>
 /favicon.ico" rel="SHORTCUT ICON">
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">	
-	<link rel="stylesheet" type="text/css" href="/styles/main.css" />
+	
 
 	<?php if ($this->_vars['css1']): ?><link href="<?php echo $this->_vars['css1']; ?>
 " rel="stylesheet" type="text/css" /><?php endif; ?>
@@ -41,12 +41,17 @@
 	<?php if ($this->_vars['css5']): ?><link href="<?php echo $this->_vars['css5']; ?>
 " rel="stylesheet" type="text/css" /><?php endif; ?>
 	<script language="javascript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	<script language="javascript" type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-	<script language="javascript" type="text/javascript" src="/styles/main.js"></script>
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" rel="stylesheet"> 
-	<script type="text/javascript" src="styles/masonry.js"></script>
-	<link rel="stylesheet" href="css/main.css">
 
+	<script language="javascript" type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+	<script language="javascript" type="text/javascript" src="/styles/main.js"></script>
+
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" rel="stylesheet">
+
+	<script type="text/javascript" src="styles/masonry.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="/styles/main.css" />
+	
 	<?php if ($this->_vars['js1']): ?><script language="javascript" type="text/javascript" src="<?php echo $this->_vars['js1']; ?>
 "></script><?php endif; ?>
 	<?php if ($this->_vars['js2']): ?><script language="javascript" type="text/javascript" src="<?php echo $this->_vars['js2']; ?>
@@ -94,12 +99,15 @@
 
 	    <div class="top-logo-wrapper">
 	      <span>
-	        <a href="" class="logo-one"></a>
+	        <!-- <a href="" class="logo-one"></a> -->
+	        <img src="img/logo-full.png" class="img-responsive floating-logo">
 	      </span>
 	      <span>
-	        <a href="" class="logo-two"></a>
+	        <!-- <a href="" class="logo-two"></a> -->
+	        <img src="img/middle-logo.png" class="img-responsive floating-logo-2">
 	      </span>
 	      <span>
-	        <a href="" class="logo-three"></a>
+	        <!-- <a href="" class="logo-three"></a> -->
+	        <img src="img/cys.png" class="img-responsive floating-logo-3">
 	      </span>
 	    </div>

@@ -191,6 +191,10 @@ nav {
     display: none;
 }
 
+.colapsable-uls {
+    display: block;
+}
+
 .logo-one {
     width: 450px;
     height: 75px;
@@ -660,7 +664,22 @@ nav {
     background: transparent url("../img/pinterest-black.png") no-repeat scroll 0% 0%;
 }
 
+.floating-logo {
+    float: left;
+    width: 333px;
+    margin-right: 156px;
+}
 
+.floating-logo-2 {
+    float: left;
+    width: 333px;
+    margin-right: 157px;
+}
+
+.floating-logo-3 {
+    float: left;
+    width: 133px;
+}
 
 
 
