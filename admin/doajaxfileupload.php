@@ -127,7 +127,7 @@ if(!isset($_SESSION['ln'])) $_SESSION['ln']=2;
 			$image = $_FILES[$fileElementName]['tmp_name'];
 			$tmp = explode(".", $_FILES[$fileElementName]['name']);
 			$ext = end($tmp);
-			
+			$tbl = $FILTER['tbl'];
 			if($FILTER['mode'] == 'gp') { // product gallery photo
 		
 				require_once("{$_config['root_dir']}/managers/SimpleImage.php");
@@ -154,14 +154,34 @@ if(!isset($_SESSION['ln'])) $_SESSION['ln']=2;
 		 	 	unlink("$tmppath/big");
 		 	 	
 		 	 	$data['product_id'] = $FILTER['id'];
-		  	} else {
+		  	} else if($tbl = 'related_places' || $tbl = 'slider' || $tbl = "treasure" || $tbl = "treasureGallery"){
 				$fp = fopen ($image, "r");
 				$data[$photo_fld] = fread($fp, filesize($image));
-		 	 	fclose ($fp);
-		 	 	$data[$photo_fld] = base64_encode($data[$photo_fld]);
-				
+				fclose ($fp);
+				$data[$photo_fld] = base64_encode($data[$photo_fld]);
+				require_once("{$_config['root_dir']}/managers/ImageManipulator.php");
+				$man = new ImageManipulator($image);
+				$man->resample(284,183);
+				$man->save("$tmppath/small");
+				/*
+				require_once("{$_config['root_dir']}/managers/SimpleImage.php");
+				$smallimage = new SimpleImage();
+				$smallimage->load($image);
+
+				//$smallimage->thumbnail_box(284,183);
+				$smallimage->save("$tmppath/small");
+				*/
+				$fp = fopen ("$tmppath/small", "r");
+				$photo2 = fread($fp, filesize("$tmppath/small"));
+				$data["small_photo"] = base64_encode($photo2);
+		  	}else {
+		  		$fp = fopen ($image, "r");
+				$data[$photo_fld] = fread($fp, filesize($image));
+				fclose ($fp);
+				$data[$photo_fld] = base64_encode($data[$photo_fld]);
+
 				if($FILTER['type']=='news' && $photo_fld=='photo2') {
-					
+
 					require_once("{$_config['root_dir']}/managers/ImageManipulator.php");
 					$man = new ImageManipulator($image);
 					$man->resample(284,183);
@@ -170,7 +190,7 @@ if(!isset($_SESSION['ln'])) $_SESSION['ln']=2;
 					require_once("{$_config['root_dir']}/managers/SimpleImage.php");
 					$smallimage = new SimpleImage();
 					$smallimage->load($image);
-					
+
 					//$smallimage->thumbnail_box(284,183);
 					$smallimage->save("$tmppath/small");
 					*/
@@ -178,15 +198,17 @@ if(!isset($_SESSION['ln'])) $_SESSION['ln']=2;
 					$photo2 = fread($fp, filesize("$tmppath/small"));
 					$data[$photo_fld] = base64_encode($photo2);
 				}
-		  	}
-			
+			}
+
 			
 			
 	 	 	list($imagewidth, $imageheight, $imageType) = getimagesize($image);
 	 	 	$imageType = image_type_to_mime_type($imageType);
 		  	$table = $FILTER['type'];
-		  	$data[$type_fld] = $imageType;
-		  	
+		  	$data["image_type"] = $imageType;
+
+			$table = "pictures";
+
 		  	if($FILTER['mode'] == 'gp') { // product gallery photo
 		  		$mm->AutoExecute($table, $data, 1, false);
 		  		$gpId = $mm->GetId();
@@ -196,7 +218,36 @@ if(!isset($_SESSION['ln'])) $_SESSION['ln']=2;
 		  		$url = "/img/products/gal{$FILTER['id']}_{$gpId}.{$ext}";
 		  		$mm->Query("UPDATE {$table} SET original='{$url}' WHERE id={$gpId}");
 		  	} else {
-		  		$mm->AutoExecute($table, $data, 2, "id={$FILTER['id']}");
+
+				$original_photo = $data['original_photo'];
+				$small_photo = $data['small_photo'];
+				$image_type = $data['image_type'];
+				$mm->Query("INSERT INTO pictures(original_photo, small_photo, image_type) VALUES('{$original_photo}', '{$small_photo}', '{$image_type}')");
+
+
+				$tbl = $FILTER['tbl'];
+				if($tbl == "related_places"){
+					$newId = $mm->GetId();
+					$mm->Query("UPDATE related_place SET picture_id={$newId} WHERE id={$FILTER['id']}");
+
+				}else if($tbl == "slider"){
+
+					$newId = $mm->GetId();
+					$mm->Query("UPDATE slider SET picture_id={$newId} WHERE id={$FILTER['id']}");
+
+				}else if($tbl == "treasureGallery"){
+					$newId = $mm->GetId();
+					$mm->Query("INSERT INTO treasure_have_picture(treasure_id, picture_id) VALUES({$FILTER['id']}, {$newId})");
+
+				}else if($tbl == "treasure"){
+					$newId = $mm->GetId();
+					$mm->Query("UPDATE treasure SET main_pic_id={$newId} WHERE id={$FILTER['id']}");
+
+
+				}
+
+//				$mm->Query("UPDATE related_place");
+
 		  	}
 	
 			@unlink($image);

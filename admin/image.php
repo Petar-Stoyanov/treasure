@@ -35,7 +35,7 @@ if($FILTER['mode']=='file') {
 	$mm->Query("SET NAMES utf8");	
 	$table = $FILTER['type'];
 	$photo_fld = nvl($FILTER['field'],'photo');
-	$type_fld = ($photo_fld=='photo'?'image_type':"{$photo_fld}_type");
+	$type_fld = 'image_type';
 	$res = $mm->SelRow("SELECT {$photo_fld}, {$type_fld} FROM {$table} WHERE id={$FILTER['id']}");
 	$photo = $res[0];
 	$photo = base64_decode($photo);

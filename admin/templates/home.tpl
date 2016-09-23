@@ -3,12 +3,14 @@
 	<!--[if !IE]>start section<![endif]-->	
 	<div class="section">
 		<!--[if !IE]>start title wrapper<![endif]-->
+		{*
 		<div class="title_wrapper">
 			<h2>Бързи връзки</h2>
 			<span class="title_wrapper_left"></span>
 			<span class="title_wrapper_right"></span>
 		</div>
 		<!--[if !IE]>end title wrapper<![endif]-->
+
 		<!--[if !IE]>start section content<![endif]-->
 		<div class="section_content">
 			<!--[if !IE]>start section content top<![endif]-->
@@ -41,10 +43,11 @@
 			
 		</div>
 		<!--[if !IE]>end section content<![endif]-->
+		*}
 	</div>
 	<!--[if !IE]>end section<![endif]-->
 	
-	
+		{*
 	<!--[if !IE]>start section<![endif]-->	
 	<div class="section table_section">
 		<!--[if !IE]>start title wrapper<![endif]-->
@@ -345,16 +348,16 @@
 										{if $FILTER.campaigns}
 											{assign var=counter value=0}
 											{foreach from=$FILTER.campaigns item=item}
-												<tr class="{if $counter%2}second{else}first{/if}{if $item.hidden} hidden{/if}">
-													<td style="width: 1px;">
-														&nbsp;
-													</td>
-													<td><a href="campaigns.php{query_str mode='edit' id=$item.id}" class="product_name">{$item.name}</a></td>
-													<td><a href="campaigns.php{query_str mode='edit' id=$item.id}" class="product_name">{$item.active_till|date_format:"%d.%m.%Y"}</a></td>
-													<td><a href="campaigns.php{query_str mode='edit' id=$item.id}" class="product_name">{$item.discount} %</a></td>
-													
+
 													<td style="width: 120px;">
-														<div class="actions_menu">
+											<tr class="{if $counter%2}second{else}first{/if}{if $item.hidden} hidden{/if}">
+        													<td style="width: 1px;">
+        														&nbsp;
+        													</td>
+        													<td><a href="campaigns.php{query_str mode='edit' id=$item.id}" class="product_name">{$item.name}</a></td>
+        													<td><a href="campaigns.php{query_str mode='edit' id=$item.id}" class="product_name">{$item.active_till|date_format:"%d.%m.%Y"}</a></td>
+        													<td><a href="campaigns.php{query_str mode='edit' id=$item.id}" class="product_name">{$item.discount} %</a></td>
+        													<div class="actions_menu">
 															<ul>
 																
 																<li><a class="edit" href="{query_str mode='edit' id=$item.id prod_id=$item.prod_id}">Edit</a></li>
@@ -389,6 +392,7 @@
 			
 			
 			<span class="scb"><span class="scb_left"></span><span class="scb_right"></span></span>
+			*}
 		
 		</div>
 		<!--[if !IE]>end section content<![endif]-->
