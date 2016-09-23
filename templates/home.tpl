@@ -55,7 +55,7 @@
         <div class="grid">
           <div class="grid-item grid-item--width2">
             <a href="">
-              <img src="img/cont-pic.png" alt="">
+              <img src="img/cont-pic.png" class="img-responsive cont-pic" alt="">
             </a>
             <h4 class="inner-h">asdas</h4>
             <p class="inner-p-1">asd</p>
@@ -64,7 +64,7 @@
 
           <div class="grid-item grid-item--width2">
             <a href="">
-              <img src="img/cont-pic.png" alt="">
+              <img src="img/cont-pic.png" class="img-responsive cont-pic" alt="">
             </a>
             <h4 class="inner-h">asdas</h4>
             <p class="inner-p-1">asd</p>
@@ -73,7 +73,7 @@
 
           <div class="grid-item grid-item--width2">
             <a href="">
-              <img src="img/cont-pic.png" alt="">
+              <img src="img/cont-pic.png" class="img-responsive cont-pic" alt="">
             </a>
             <h4 class="inner-h">asdas</h4>
             <p class="inner-p-1">asd</p>
@@ -92,7 +92,52 @@
           </div>
           <div class="grid-item grid-item--width2">
             <a href="">
-              <img src="img/cont-pic.png" alt="">
+              <img src="img/cont-pic.png" class="img-responsive cont-pic" alt="">
+            </a>
+            <h4 class="inner-h">asdas</h4>
+            <p class="inner-p-1">asd</p>
+            <p class="inner-p-2">sds</p>
+          </div>
+
+          <div class="grid-item grid-item--width4">
+            <a href="">
+              <img src="img/bigger-pic.png" class="img-responsive cont-pic-2" alt="">
+            </a>
+            <h4 class="inner-h">asdas</h4>
+            <p class="inner-p-1">asd</p>
+            <p class="inner-p-2">sds</p>
+          </div>
+
+          <div class="grid-item grid-item--width2">
+            <a href="">
+              <img src="img/cont-pic.png" class="img-responsive cont-pic" alt="">
+            </a>
+            <h4 class="inner-h">asdas</h4>
+            <p class="inner-p-1">asd</p>
+            <p class="inner-p-2">sds</p>
+          </div>
+
+          <div class="grid-item grid-item--width2">
+            <a href="">
+              <img src="img/cont-pic.png" class="img-responsive cont-pic" alt="">
+            </a>
+            <h4 class="inner-h">asdas</h4>
+            <p class="inner-p-1">asd</p>
+            <p class="inner-p-2">sds</p>
+          </div>
+
+          <div class="grid-item grid-item--width2">
+            <a href="">
+              <img src="img/cont-pic.png" class="img-responsive cont-pic" alt="">
+            </a>
+            <h4 class="inner-h">asdas</h4>
+            <p class="inner-p-1">asd</p>
+            <p class="inner-p-2">sds</p>
+          </div>
+
+          <div class="grid-item grid-item--width2">
+            <a href="">
+              <img src="img/cont-pic.png" class="img-responsive cont-pic" alt="">
             </a>
             <h4 class="inner-h">asdas</h4>
             <p class="inner-p-1">asd</p>

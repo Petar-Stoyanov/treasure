@@ -4,4 +4,12 @@ $(document).ready(function() {
 	$(".side-menu-title").click( function() {
 		$(".colapsable-uls-hidden").toggleClass("colapsable-uls");
 	});
+	
+  	var $grid = $('.grid').masonry({
+	 
+	});
+
+	$grid.imagesLoaded().progress( function() {
+	  $grid.masonry('layout');
+	});
 });

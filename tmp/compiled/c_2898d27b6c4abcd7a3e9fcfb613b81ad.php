@@ -1,4 +1,4 @@
-<?php /* V2.10 Template Lite 4 January 2007  (c) 2005-2007 Mark Dickenson. All rights reserved. Released LGPL. 2016-09-16 12:06:17 EEST */ ?>
+<?php /* V2.10 Template Lite 4 January 2007  (c) 2005-2007 Mark Dickenson. All rights reserved. Released LGPL. 2016-09-23 11:20:00 EEST */ ?>
 
 		</section>
 		<footer>
@@ -49,6 +49,10 @@
 		        <input type="text" name="fname" class="subscribe-input"><br>
 		        <input type="submit" value="Submit" class="submit-btn">
 		      </form>
+
+	     		<script src="https://unpkg.com/masonry-layout@4.1/dist/masonry.pkgd.min.js"></script>
+				<script src="https://unpkg.com/imagesloaded@4.1/imagesloaded.pkgd.min.js"></script>
+
 		    </footer>
 		</div>
 	</body>

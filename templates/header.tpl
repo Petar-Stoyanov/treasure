@@ -20,7 +20,8 @@
 	<link href="{$_config.base_url}/favicon.ico" rel="SHORTCUT ICON">
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">	
 	
-
+	
+	
 	{if $css1}<link href="{$css1}" rel="stylesheet" type="text/css" />{/if}
 	{if $css2}<link href="{$css2}" rel="stylesheet" type="text/css" />{/if}
 	{if $css3}<link href="{$css3}" rel="stylesheet" type="text/css" />{/if}

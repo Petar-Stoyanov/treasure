@@ -1,4 +1,4 @@
-<?php require_once('/Users/petar/Documents/lenovo transfer/Projects/treasure/inc/Smarty/plugins/function.query_str.php'); $this->register_function("query_str", "tpl_function_query_str");  require_once('/Users/petar/Documents/lenovo transfer/Projects/treasure/inc/Smarty/plugins/block.capture.php'); $this->register_block("capture", "tpl_block_capture");  /* V2.10 Template Lite 4 January 2007  (c) 2005-2007 Mark Dickenson. All rights reserved. Released LGPL. 2016-09-22 11:42:59 EEST */ ?>
+<?php require_once('/Users/petar/Documents/lenovo transfer/Projects/treasure/inc/Smarty/plugins/function.query_str.php'); $this->register_function("query_str", "tpl_function_query_str");  require_once('/Users/petar/Documents/lenovo transfer/Projects/treasure/inc/Smarty/plugins/block.capture.php'); $this->register_block("capture", "tpl_block_capture");  /* V2.10 Template Lite 4 January 2007  (c) 2005-2007 Mark Dickenson. All rights reserved. Released LGPL. 2016-09-23 13:24:38 EEST */ ?>
 
 <?php $_templatelite_tpl_vars = $this->_vars;
 echo $this->_fetch_compile_include("templates/header.tpl", array());
@@ -61,7 +61,7 @@ unset($_templatelite_tpl_vars);
         <div class="grid">
           <div class="grid-item grid-item--width2">
             <a href="">
-              <img src="img/cont-pic.png" alt="">
+              <img src="img/cont-pic.png" class="img-responsive cont-pic" alt="">
             </a>
             <h4 class="inner-h">asdas</h4>
             <p class="inner-p-1">asd</p>
@@ -70,7 +70,7 @@ unset($_templatelite_tpl_vars);
 
           <div class="grid-item grid-item--width2">
             <a href="">
-              <img src="img/cont-pic.png" alt="">
+              <img src="img/cont-pic.png" class="img-responsive cont-pic" alt="">
             </a>
             <h4 class="inner-h">asdas</h4>
             <p class="inner-p-1">asd</p>
@@ -79,7 +79,7 @@ unset($_templatelite_tpl_vars);
 
           <div class="grid-item grid-item--width2">
             <a href="">
-              <img src="img/cont-pic.png" alt="">
+              <img src="img/cont-pic.png" class="img-responsive cont-pic" alt="">
             </a>
             <h4 class="inner-h">asdas</h4>
             <p class="inner-p-1">asd</p>
@@ -98,7 +98,52 @@ unset($_templatelite_tpl_vars);
           </div>
           <div class="grid-item grid-item--width2">
             <a href="">
-              <img src="img/cont-pic.png" alt="">
+              <img src="img/cont-pic.png" class="img-responsive cont-pic" alt="">
+            </a>
+            <h4 class="inner-h">asdas</h4>
+            <p class="inner-p-1">asd</p>
+            <p class="inner-p-2">sds</p>
+          </div>
+
+          <div class="grid-item grid-item--width4">
+            <a href="">
+              <img src="img/bigger-pic.png" class="img-responsive cont-pic-2" alt="">
+            </a>
+            <h4 class="inner-h">asdas</h4>
+            <p class="inner-p-1">asd</p>
+            <p class="inner-p-2">sds</p>
+          </div>
+
+          <div class="grid-item grid-item--width2">
+            <a href="">
+              <img src="img/cont-pic.png" class="img-responsive cont-pic" alt="">
+            </a>
+            <h4 class="inner-h">asdas</h4>
+            <p class="inner-p-1">asd</p>
+            <p class="inner-p-2">sds</p>
+          </div>
+
+          <div class="grid-item grid-item--width2">
+            <a href="">
+              <img src="img/cont-pic.png" class="img-responsive cont-pic" alt="">
+            </a>
+            <h4 class="inner-h">asdas</h4>
+            <p class="inner-p-1">asd</p>
+            <p class="inner-p-2">sds</p>
+          </div>
+
+          <div class="grid-item grid-item--width2">
+            <a href="">
+              <img src="img/cont-pic.png" class="img-responsive cont-pic" alt="">
+            </a>
+            <h4 class="inner-h">asdas</h4>
+            <p class="inner-p-1">asd</p>
+            <p class="inner-p-2">sds</p>
+          </div>
+
+          <div class="grid-item grid-item--width2">
+            <a href="">
+              <img src="img/cont-pic.png" class="img-responsive cont-pic" alt="">
             </a>
             <h4 class="inner-h">asdas</h4>
             <p class="inner-p-1">asd</p>

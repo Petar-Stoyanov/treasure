@@ -1,4 +1,4 @@
-<?php require_once('/Users/petar/Documents/lenovo transfer/Projects/treasure/inc/Smarty/plugins/function.query_str.php'); $this->register_function("query_str", "tpl_function_query_str");  require_once('/Users/petar/Documents/lenovo transfer/Projects/treasure/inc/Smarty/plugins/block.capture.php'); $this->register_block("capture", "tpl_block_capture");  /* V2.10 Template Lite 4 January 2007  (c) 2005-2007 Mark Dickenson. All rights reserved. Released LGPL. 2016-09-22 11:02:51 EEST */ ?>
+<?php require_once('/Users/petar/Documents/lenovo transfer/Projects/treasure/inc/Smarty/plugins/function.query_str.php'); $this->register_function("query_str", "tpl_function_query_str");  require_once('/Users/petar/Documents/lenovo transfer/Projects/treasure/inc/Smarty/plugins/block.capture.php'); $this->register_block("capture", "tpl_block_capture");  /* V2.10 Template Lite 4 January 2007  (c) 2005-2007 Mark Dickenson. All rights reserved. Released LGPL. 2016-09-23 11:20:00 EEST */ ?>
 
 <!DOCTYPE html>
 <html>
@@ -29,7 +29,8 @@
 /favicon.ico" rel="SHORTCUT ICON">
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">	
 	
-
+	
+	
 	<?php if ($this->_vars['css1']): ?><link href="<?php echo $this->_vars['css1']; ?>
 " rel="stylesheet" type="text/css" /><?php endif; ?>
 	<?php if ($this->_vars['css2']): ?><link href="<?php echo $this->_vars['css2']; ?>
