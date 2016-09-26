@@ -11,7 +11,7 @@ $_config['root_dir'] = '/Users/shukri/Documents/workspace/ATA48/treasure';
 $_config['smarty_cache'] = '/Users/shukri/Documents/workspace/ATA48/treasure/tmp';
 $_config['tmp_dir'] = '/Users/shukri/Documents/workspace/ATA48/treasure/tmp';
 
-$_config['session_life'] = 20*60; // Set to 20 minutes
+$_config['session_life'] = 20*120; // Set to 20 minutes
 $_config['base_url'] = 'http://treasure';
 $_config['ssl_url'] = 'https://treasure';
 
