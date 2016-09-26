@@ -44,15 +44,38 @@
           </div>
 
           <div class="grid-item grid-item--width2">
-            asd
+            <div class="grid-item grid-item--width2">
+              <a href="">
+                <img src="img/cont-pic.png" class="img-responsive cont-pic" alt="">
+              </a>
+              <h4 class="inner-h">asdas</h4>
+              <p class="inner-p-1">asd</p>
+              <p class="inner-p-2">sds</p>
+            </div>
           </div>
 
           <div class="grid-item grid-item--width3">
-            asd
+            <div class="grid-item grid-item--width2">
+              <a href="">
+                <img src="img/cont-pic.png" class="img-responsive cont-pic" alt="">
+              </a>
+              <h4 class="inner-h">asdas</h4>
+              <p class="inner-p-1">asd</p>
+              <p class="inner-p-2">sds</p>
+            </div>
           </div>
+
           <div class="grid-item grid-item--width2">
-            asd
+            <div class="grid-item grid-item--width2">
+              <a href="">
+                <img src="img/cont-pic.png" class="img-responsive cont-pic" alt="">
+              </a>
+              <h4 class="inner-h">asdas</h4>
+              <p class="inner-p-1">asd</p>
+              <p class="inner-p-2">sds</p>
+            </div>
           </div>
+          
         </div>
       </div>
 
