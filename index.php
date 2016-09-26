@@ -28,10 +28,16 @@ switch ($FILTER['mode']) {
 function show(&$FILTER, $errs = array()) {
 	global $PAGE_TITLE, $_cache, $mm, $_config;
 
-	$museums = $mm->SelAssoc('SELECT area_id, name, type_id, hist_period_id, main_pic_id, sorting_weight FROM treasure WHERE is_deleted=0 ORDER BY sorting_weight ASC');
-	
+	$museums = $mm->SelAssoc('SELECT t.id, a.name_bg as area, ty.name as type, t.name, hp.name as historical_period, t.main_pic_id FROM treasure as t
+								LEFT JOIN area as a ON area_id=a.id
+								LEFT JOIN type as ty ON type_id=ty.id
+								LEFT JOIN historical_period as hp ON hist_period_id=hp.id
+								WHERE t.is_deleted=0 ORDER BY t.sorting_weight ASC');
+
+	$slider = $mm->SelAssoc("SELECT picture_id, text, link FROM slider WHERE is_deleted=0");
 
 	$FILTER['museums'] = $museums;
+	$FILTER['slider'] = $slider;
 
 	$tpl = new Template_Lite();
 	if(!empty($errs)) {

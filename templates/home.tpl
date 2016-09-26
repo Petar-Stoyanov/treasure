@@ -14,14 +14,33 @@
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
       <!-- Indicators -->
       <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        {counter start=0 skip=1 assign="count"}
+        {foreach from=$FILTER.slider item=slide}
+          {if $count eq 0}
+            <li data-target="#myCarousel" data-slide-to="{$count}" class="active"></li>
+          {else}
+            <li data-target="#myCarousel" data-slide-to="{$count}"></li>
+          {/if}
+          {counter}
+        {/foreach}
+        <!--
         <li data-target="#myCarousel" data-slide-to="1"></li>
         <li data-target="#myCarousel" data-slide-to="2"></li>
         <li data-target="#myCarousel" data-slide-to="3"></li>
+        -->
       </ol>
 
       <!-- Wrapper for slides -->
       <div class="carousel-inner" role="listbox">
+        {counter start=0 skip=1 assign="count"}
+        {foreach from=$FILTER.slider item=slide}
+          <div class="item {if $count eq 0}active{/if}">
+            <img src="image.php?mode=get&fl=banner&size=original&id={$slide.picture_id}" alt="" />
+          </div>
+        {counter}
+        {/foreach}
+
+        <!--
         <div class="item active">
           <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=1650&h=350" alt="">
         </div>
@@ -37,6 +56,7 @@
         <div class="item">
           <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=1650&h=350" alt="">
         </div>
+        -->
       </div>
 
       <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
@@ -57,12 +77,14 @@
           {foreach from=$FILTER.museums item=museum}
 
           <div class="grid-item grid-item--width2">
-            <a href="">
-              <img src="img/cont-pic.png" class="img-responsive cont-pic" alt="">
+           <!-- treasure/{$museum.name} -->
+            <a href="inner-page.php?object={$museum.name}">
+              <img src="image.php?mode=get&fl=museum_main_pic&size=small&id={$museum.id}" class="img-responsive cont-pic" alt="">
             </a>
             <h4 class="inner-h">{$museum.name}</h4>
-            <p class="inner-p-1">asd</p>
-            <p class="inner-p-2">sds</p>
+            <p class="inner-p-1">{$museum.area}</p>
+            <p class="inner-p-2">{$museum.type}</p>
+            <p class="inner-p-2">{$museum.historical_period}</p>
           </div>
 
           <!--<div class="grid-item grid-item--width2">

@@ -2,6 +2,7 @@
 include('inc/application.php');
 
 require("{$_SERVER['DOCUMENT_ROOT']}/inc/Smarty/class.template.php");
+error_reporting(0);
 
 $PAGE_TITLE .= ' - Превозно средство';
 $PAGE_ID = -7;
@@ -159,14 +160,23 @@ function insertUpdate(&$FILTER) {
     $video = $FILTER['video'];
     $working_time = $FILTER['working_time'];
     $sorting_weight = $FILTER['sorting_weight'];
-   if($FILTER['id']>0) {
+    if($FILTER['id']>0) {
         $id = $FILTER['id'];
 //        $res = $mm->AutoExecute('area', $FILTER['item'], 2, "id={$FILTER['id']}", true);
 
-          $res = $mm->Query("UPDATE treasure SET name='{$name}', description='{$description}', location=GeomFromText('POINT({$location_x} {$location_y})'),
-                            area_id={$area}, type_id={$type}, working_time='{$working_time}', hist_period_id={$historical_period},
-                             video_url='{$video}', first_rel_place_id={$first_rel_place_id}, second_rel_place_id={$second_rel_place_id}, sorting_weight={$sorting_weight} WHERE id={$id}");
+
+        if(is_null($first_rel_place_id) || is_null($second_rel_place_id)){
+
+            $res = $mm->Query("UPDATE treasure SET name='{$name}', description='{$description}', location=GeomFromText('POINT({$location_x} {$location_y})'),
+                                             area_id={$area}, type_id={$type}, working_time='{$working_time}', hist_period_id={$historical_period},
+                                              video_url='{$video}', sorting_weight={$sorting_weight} WHERE id={$id}");
+        }else{
+            $res = $mm->Query("UPDATE treasure SET name='{$name}', description='{$description}', location=GeomFromText('POINT({$location_x} {$location_y})'),
+                                    area_id={$area}, type_id={$type}, working_time='{$working_time}', hist_period_id={$historical_period},
+                                     video_url='{$video}', first_rel_place_id={$first_rel_place_id}, second_rel_place_id={$second_rel_place_id}, sorting_weight={$sorting_weight} WHERE id={$id}");
+        }
     } else {
+
 
     if(is_null($first_rel_place_id) || is_null($second_rel_place_id)){
     $res = $mm->Query("INSERT INTO treasure(name, description, address, area_id, location, working_time, type_id, hist_period_id, video_url, sorting_weight)

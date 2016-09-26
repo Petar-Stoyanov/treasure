@@ -141,6 +141,95 @@ if($FILTER['mode']=='file') {
 		$photo = fread($fp, filesize("$tmppath/homePromo"));
 	 	fclose ($fp);
 	 	unlink("$tmppath/homePromo");*/
+}elseif($FILTER['mode']=='get'){
+	$mm = new DB($_config['db_host'], $_config['db_user'], $_config['db_password'], true);
+	$mm->UseDB($_config['db_dbname']);
+	$mm->Query("SET NAMES cp1251");
+
+	$pic_id = NULL;
+
+	if($FILTER['fl'] == "museum_main_pic"){
+
+		$pic_id = $mm->SelOne("SELECT main_pic_id FROM treasure WHERE id={$FILTER['id']}");
+
+	}else if($FILTER['fl'] == "banner"){
+		$pic_id = $FILTER['id'];
+	}
+	$photo_type = $FILTER['size'] != NULL ? $FILTER['size'] . '_' : 'original_';
+	$res = $mm->SelRow("SELECT {$photo_type}photo, image_type FROM pictures WHERE id={$pic_id}");
+
+	$photo = $res[0];
+	$photo = base64_decode($photo);
+	$type = $res[1];
+	if(empty($photo) && $table=='users') {
+		$image = "{$_config['root_dir']}/img/avatar_def.jpg";
+		list($imagewidth, $imageheight, $imageType) = getimagesize($image);
+		$fp = fopen ($image, "r");
+		$photo = fread($fp, filesize($image));
+		fclose ($fp);
+		$type = image_type_to_mime_type($imageType);
+	}elseif(empty($photo) && $table=='news') {
+		$image = "{$_config['root_dir']}/img/pics/news.jpg";
+		list($imagewidth, $imageheight, $imageType) = getimagesize($image);
+		$fp = fopen ($image, "r");
+		$photo = fread($fp, filesize($image));
+		fclose ($fp);
+		$type = image_type_to_mime_type($imageType);
+	}
+	if(!empty($FILTER['size'])) {
+		list($width, $height) = explode("x", $FILTER['size']);
+		$FILTER['name'] = 'dbPhoto' . $FILTER['id'];
+		$image = "$tmppath/{$FILTER['name']}";
+		$fp = fopen ($image, "w");
+		fwrite($fp, $photo);
+		fclose($fp);
+
+		require_once("{$_config['root_dir']}/managers/SimpleImage.php");
+		$smallimage = new SimpleImage();
+		$smallimage->load($image);
+		$smallimage->resize($width, $height);
+		$smallimage->save($image);
+		$fp = fopen ($image, "r");
+		$photo = fread($fp, filesize($image));
+		fclose ($fp);
+		unlink($image);
+	}elseif(!empty($FILTER['height'])) {
+		$FILTER['name'] = 'dbPhoto' . $FILTER['id'];
+		$image = "$tmppath/{$FILTER['name']}";
+		$fp = fopen ($image, "w");
+		fwrite($fp, $photo);
+		fclose($fp);
+		list($imagewidth, $imageheight, $imageType) = getimagesize($image);
+		if($imageheight>$FILTER['height']) {
+			require_once("{$_config['root_dir']}/managers/SimpleImage.php");
+			$smallimage = new SimpleImage();
+			$smallimage->load($image);
+			$smallimage->resizeToHeight($FILTER['height']);
+			$smallimage->save($image);
+			$fp = fopen ($image, "r");
+			$photo = fread($fp, filesize($image));
+			fclose ($fp);
+		}
+		unlink($image);
+	}elseif(!empty($FILTER['width'])) {
+		$FILTER['name'] = 'dbPhoto' . $FILTER['id'];
+		$image = "$tmppath/{$FILTER['name']}";
+		$fp = fopen ($image, "w");
+		fwrite($fp, $photo);
+		fclose($fp);
+		list($imagewidth, $imageheight, $imageType) = getimagesize($image);
+		if ($imagewidth>$FILTER['width']) {
+			require_once("{$_config['root_dir']}/managers/SimpleImage.php");
+			$smallimage = new SimpleImage();
+			$smallimage->load($image);
+			$smallimage->resizeToWidth($FILTER['width']);
+			$smallimage->save($image);
+			$fp = fopen ($image, "r");
+			$photo = fread($fp, filesize($image));
+			fclose ($fp);
+		}
+		unlink($image);
+	}
 } else {
 	$mm = new DB($_config['db_host'], $_config['db_user'], $_config['db_password'], true);
 	$mm->UseDB($_config['db_dbname']);
