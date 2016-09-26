@@ -22,8 +22,16 @@ switch ($FILTER['mode']) {
 		break;
 }
 
+
+
+
 function show(&$FILTER, $errs = array()) {
 	global $PAGE_TITLE, $_cache, $mm, $_config;
+
+	$museums = $mm->SelAssoc('SELECT area_id, name, type_id, hist_period_id, main_pic_id, sorting_weight FROM treasure WHERE is_deleted=0 ORDER BY sorting_weight ASC');
+	
+
+	$FILTER['museums'] = $museums;
 
 	$tpl = new Template_Lite();
 	if(!empty($errs)) {

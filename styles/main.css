@@ -586,8 +586,9 @@ nav {
 }
 
 .location-icon {
-    width: 44px;
-    height: 38px;
+    width: 35px;
+    height: 29px;
+    margin-top: 4px;
     float: left;
     background: transparent url("../img/building.png") no-repeat scroll 0% 0%;
 }
@@ -625,7 +626,7 @@ nav {
     margin-bottom: 20px;
     margin: 15px;
     padding-bottom: 10px;
-    border-bottom: 1px solid #d1d1d1;
+    border-bottom: 1px dotted #d1d1d1;
 }
 
 .social-icons-i1 {
@@ -687,6 +688,7 @@ nav {
 
 .cont-pic {
     max-width: 185px;
+    height: 135px;
 }
 
 .cont-pic-2 {
@@ -756,7 +758,7 @@ nav {
     margin-right: 30px;
 }
 .grid-item--width6 { 
-    width: 500px;
+    width: 600px;
 }
 
 .grid-item--height2 { height: 200px; }

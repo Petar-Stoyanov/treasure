@@ -1,4 +1,4 @@
-<?php require_once('/Users/petar/Documents/lenovo transfer/Projects/treasure/inc/Smarty/plugins/function.query_str.php'); $this->register_function("query_str", "tpl_function_query_str");  require_once('/Users/petar/Documents/lenovo transfer/Projects/treasure/inc/Smarty/plugins/block.capture.php'); $this->register_block("capture", "tpl_block_capture");  /* V2.10 Template Lite 4 January 2007  (c) 2005-2007 Mark Dickenson. All rights reserved. Released LGPL. 2016-09-23 13:24:38 EEST */ ?>
+<?php require_once('/Users/petar/Documents/lenovo transfer/Projects/treasure/inc/Smarty/plugins/function.query_str.php'); $this->register_function("query_str", "tpl_function_query_str");  require_once('/Users/petar/Documents/lenovo transfer/Projects/treasure/inc/Smarty/plugins/block.capture.php'); $this->register_block("capture", "tpl_block_capture");  /* V2.10 Template Lite 4 January 2007  (c) 2005-2007 Mark Dickenson. All rights reserved. Released LGPL. 2016-09-23 17:28:34 EEST */ ?>
 
 <?php $_templatelite_tpl_vars = $this->_vars;
 echo $this->_fetch_compile_include("templates/header.tpl", array());
@@ -59,11 +59,15 @@ unset($_templatelite_tpl_vars);
 
       <div class="map-wrapper">
         <div class="grid">
+
+        <!--  <?php if (count((array)$this->_vars['FILTER']['museums'])): foreach ((array)$this->_vars['FILTER']['museums'] as $this->_vars['museum']): ?> -->
+
           <div class="grid-item grid-item--width2">
             <a href="">
               <img src="img/cont-pic.png" class="img-responsive cont-pic" alt="">
             </a>
-            <h4 class="inner-h">asdas</h4>
+            <h4 class="inner-h"><?php echo $this->_vars['FILTER']['aboutus_text']; ?>
+</h4>
             <p class="inner-p-1">asd</p>
             <p class="inner-p-2">sds</p>
           </div>
@@ -86,16 +90,8 @@ unset($_templatelite_tpl_vars);
             <p class="inner-p-2">sds</p>
           </div>
 
-          <div class="grid-item grid-item--width3">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4062.3559569188005!2d25.61438989906971!3d43.077158379987075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40a9214b3d9491dd%3A0x400a01269bf5dc0!2z0JLQtdC70LjQutC-INCi0YrRgNC90L7QstC-!5e0!3m2!1sbg!2sbg!4v1474533632666" width="100%" height="505px" frameborder="0" style="border:0" allowfullscreen></iframe>
+          
 
-            <div class="map-text">
-              <a href="" class="map-text-a">
-                <span class="map-text-inner">Потърси обект на картата</span>
-                <span class="map-icon"></span>
-              </a>
-            </div>
-          </div>
           <div class="grid-item grid-item--width2">
             <a href="">
               <img src="img/cont-pic.png" class="img-responsive cont-pic" alt="">
@@ -150,6 +146,18 @@ unset($_templatelite_tpl_vars);
             <p class="inner-p-2">sds</p>
           </div>
         </div>
+
+        <div class="grid-item grid-item--width3">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4062.3559569188005!2d25.61438989906971!3d43.077158379987075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40a9214b3d9491dd%3A0x400a01269bf5dc0!2z0JLQtdC70LjQutC-INCi0YrRgNC90L7QstC-!5e0!3m2!1sbg!2sbg!4v1474533632666" width="100%" height="505px" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+            <div class="map-text">
+              <a href="" class="map-text-a">
+                <span class="map-text-inner">Потърси обект на картата</span>
+                <span class="map-icon"></span>
+              </a>
+            </div>
+          </div>
+
 
         <button class="load-more">
           <span class="load-more-text">ЗАРЕДИ ОЩЕ</span>
