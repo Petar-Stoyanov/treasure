@@ -3,13 +3,13 @@ if(in($PAGE_ID,-5,-6,-7,-8,-9,-10,-11,-12,-15,-16,-17,-18,-19,-20,-23,-25,-39,-4
 	$noms_sel = in($PAGE_ID,-5,-6,-7,-8,-9,-10,-11,-12,-16,-18,-20,-23);
 	$sub_menu = array(
 		array('href' => 'orders.php?type=1&p=0', 'title' => 'Поръчки', 'selected'=>($PAGE_ID==-25)),
-		array('href' => 'products.php', 'title' => 'Продукти','selected'=>($PAGE_ID==-15)),
-		array('href' => 'promotions.php', 'title' => 'Промоции','selected'=>($PAGE_ID==-17)),
-		array('href' => 'nom_product_types.php', 'title' => 'Номенклатури', 'selected' => $noms_sel),
-		array('href' => 'product_groups.php', 'title' => 'Групи', 'selected' => ($PAGE_ID==-19)),
-		array('href' => 'del_zones.php', 'title' => 'Зони доставки', 'selected' => ($PAGE_ID==-39)),
-		array('href' => 'popular_searches.php', 'title' => 'Най-търсени', 'selected' => ($PAGE_ID==-40)),
-		array('href' => 'product_outfits.php', 'title' => 'Аутфити', 'selected' => ($PAGE_ID==-20)),
+//		array('href' => 'products.php', 'title' => 'Продукти','selected'=>($PAGE_ID==-15)),
+//		array('href' => 'promotions.php', 'title' => 'Промоции','selected'=>($PAGE_ID==-17)),
+//		array('href' => 'nom_product_types.php', 'title' => 'Номенклатури', 'selected' => $noms_sel),
+//		array('href' => 'product_groups.php', 'title' => 'Групи', 'selected' => ($PAGE_ID==-19)),
+//		array('href' => 'del_zones.php', 'title' => 'Зони доставки', 'selected' => ($PAGE_ID==-39)),
+//		array('href' => 'popular_searches.php', 'title' => 'Най-търсени', 'selected' => ($PAGE_ID==-40)),
+//		array('href' => 'product_outfits.php', 'title' => 'Аутфити', 'selected' => ($PAGE_ID==-20)),
 	);
 } elseif(in($PAGE_ID, -21)) {
 	$sub_menu = array(

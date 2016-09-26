@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<title>{$PAGE_TITLE}</title>
+	<title>Treasure</title>
 	<meta http-equiv="content-type" content="text/html; charset=windows-1251" />
 	<meta http-equiv="imagetoolbar" content="no" />
 	{if empty($login)}
@@ -65,7 +65,7 @@
 						</dl>
 					</div>
 					<!--[if !IE]>start search<![endif]-->
-					<div id="search_wrapper">
+					<!--<div id="search_wrapper">
 						<form method="POST">
 							<fieldset>
 								<label>
@@ -77,7 +77,7 @@
 						<ul id="search_wrapper_menu">
 							<li class="first"><a href="filter.php{query_str smode=$smode}">Разширено търсене</a></li>
 						</ul>
-					</div>
+					</div>-->
 				<!--[if !IE]>end search<![endif]-->
 				</div>
 				<!--[if !IE]>end user details<![endif]-->
@@ -87,9 +87,15 @@
 			<div id="menus_wrapper">
 				<div id="main_menu">
 					<ul>
-						<li><a href="index.php" {if $PAGE_ID eq -1}class="selected"{/if}><span><span>Начало</span></span></a></li>
+						<li><a href="nom_slider.php" {if $PAGE_ID eq -6}class="selected"{/if}><span><span>Banner</span></span></a></li>
+						<li><a href="nom_object_types.php" {if $PAGE_ID eq -2}class="selected"{/if}><span><span>Object type</span></span></a></li>
+						<li><a href="nom_historical_period.php" {if $PAGE_ID eq -3}class="selected"{/if}><span><span>Historical period</span></span></a></li>
+						<li><a href="nom_area.php" {if $PAGE_ID eq -4}class="selected"{/if}><span><span>Region</span></span></a></li>
+						<li><a href="related_places.php" {if $PAGE_ID eq -5}class="selected"{/if}><span><span>Related places</span></span></a></li>
+						<li><a href="object.php" {if $PAGE_ID eq -7}class="selected"{/if}><span><span>Treasure</span></span></a></li>
+
+						{*
 						<li><a href="orders.php?type=1&p=0" {if in($PAGE_ID,-5,-6,-7,-8,-9,-10,-11,-12,-15,-16,-17,-18,-23,-25)}class="selected"{/if}><span><span>Магазин</span></span></a></li>
-						<li><a href="library.php" {if $PAGE_ID eq -21}class="selected"{/if}><span><span>Сайт-съдържание</span></span></a></li>
 						<li><a href="partners.php" {if in($PAGE_ID,-13,-14)}class="selected"{/if}><span><span>Партньори</span></span></a></li>
 						<li><a href="users.php"  {if in($PAGE_ID,-4,-26)}class="selected"{/if}><span><span>Потребители</span></span></a></li>
 						<li><a href="log.php"  {if $PAGE_ID eq -27}class="selected"{/if}><span><span>Системен лог</span></span></a></li>
@@ -97,7 +103,7 @@
 						<li><a href="archive.php"  class="last{if $PAGE_ID eq -30} selected{/if}"><span><span>Системно</span></span></a></li>
 						<li><a href="galleries.php"  class="last{if $PAGE_ID eq -42} selected{/if}"><span><span>Галерии</span></span></a></li>
 						<li><a href="reports.php"  class="last{if $PAGE_ID eq -41} selected{/if}"><span><span>Справки</span></span></a></li>
-						
+						*}
 					</ul>
 				</div>
 				<div id="sec_menu">

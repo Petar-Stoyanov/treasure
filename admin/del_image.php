@@ -43,11 +43,26 @@ if($FILTER['mode']=='file') {
 	$mm = new DB($_config['db_host'], $_config['db_user'], $_config['db_password'], true);
 	$mm->UseDB($_config['db_dbname']);
 	$mm->Query("SET NAMES cp1251");
-	
-	$table = $FILTER['type'];
-	$photo_fld = nvl($FILTER['field'],'photo');
-	$type_fld = ($photo_fld=='photo'?'image_type':"{$photo_fld}_type");
-	$res = $mm->Query("UPDATE {$table} SET {$photo_fld}=NULL, {$type_fld}=NULL WHERE id={$FILTER['id']}");
+	$tbl = $FILTER['tbl'];
+	if($tbl == "related_places"){
+		$mm->Query("UPDATE related_place SET picture_id=NULL WHERE id={$FILTER['id']}");
+		$res = $mm->SelRow("DELETE FROM pictures WHERE id={$FILTER['id']}");
+
+	}else if($tbl == "slider"){
+			$mm->Query("UPDATE slider SET picture_id=NULL WHERE id={$FILTER['id']}");
+    		$res = $mm->SelRow("DELETE FROM pictures WHERE id={$FILTER['id']}");
+	}else if($tbl == "treasure"){
+
+		$mm->Query("UPDATE treasure SET main_pic_id=NULL WHERE id={$FILTER['id']}");
+
+	}else if($tbl == "treasure_have_picture"){
+
+	    $res = $mm->SelRow("DELETE FROM treasure_have_picture WHERE picture_id={$FILTER['id']}");
+	}
+//	$table = $FILTER['type'];
+//	$photo_fld = nvl($FILTER['field'],'photo');
+//	$type_fld = ($photo_fld=='photo'?'image_type':"{$photo_fld}_type");
+//	$res = $mm->Query("UPDATE {$table} SET {$photo_fld}=NULL, {$type_fld}=NULL WHERE id={$FILTER['id']}");
 }
 
 redirect($FILTER['back_url']);
