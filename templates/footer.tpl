@@ -37,7 +37,7 @@
 		      </ul>
 
 		      <!-- <span class="subscribe-span"></span> -->
-		      <img class="subscribe-img" src="img/subscribe.png" class="img-responsive" alt="footer logo"> 
+		      <img class="subscribe-img" src="/img/subscribe.png" class="img-responsive" alt="footer logo">
 
 		      <span class="reserved">2016 Открий съкровището в Тръновско.</span>
 

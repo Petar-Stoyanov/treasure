@@ -28,7 +28,7 @@ switch ($FILTER['mode']) {
 function show(&$FILTER, $errs = array()) {
 	global $PAGE_TITLE, $_cache, $mm, $_config;
 
-	$museums = $mm->SelAssoc('SELECT t.id, a.name_bg as area, ty.name as type, t.name, hp.name as historical_period, t.main_pic_id FROM treasure as t
+	$museums = $mm->SelAssoc('SELECT t.id, a.name_bg as area, ty.name as type, t.name, hp.name as historical_period, t.main_pic_id, t.seo_url FROM treasure as t
 								LEFT JOIN area as a ON area_id=a.id
 								LEFT JOIN type as ty ON type_id=ty.id
 								LEFT JOIN historical_period as hp ON hist_period_id=hp.id
