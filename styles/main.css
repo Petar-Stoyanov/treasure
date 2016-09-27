@@ -11,7 +11,7 @@ footer {
 }
 
 nav {
-    width: 1120px;
+    width: 1012px;
     margin: 0 auto;
     height: 44px;
 }
@@ -224,7 +224,7 @@ nav {
 .nav-a {
     text-decoration: none;
     color: #090909;
-    width: 220px;
+    width: 250px;
     text-align: center;
     padding: 10px 0;
     display: inline-block;
@@ -778,7 +778,7 @@ nav {
     margin-right: 20px;
 }
 .grid-item--width3 {
-    width: 410px;
+    width: 380px;
     margin-right: 15px;
     position: relative;
 }
@@ -796,6 +796,6 @@ nav {
     width: 600px;
 }
 
-.grid-item--height2 { height: 200px; }
+/*.grid-item--height2 { height: 200px; }
 .grid-item--height3 { height: 260px; }
-.grid-item--height4 { height: 360px; }
+.grid-item--height4 { height: 360px; }*/
