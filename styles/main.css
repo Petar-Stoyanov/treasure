@@ -4,6 +4,7 @@ body {
 }
 
 footer {
+    margin-top: 20px;
     padding: 20px 155px;
     background-color: #211f1e;
     border-top: 4px solid #c41644;
@@ -20,7 +21,7 @@ nav {
     width: 300px;
     height: 39px;
     margin-bottom: 50px;
-    margin-right: 157px;
+    margin-right: 167px;
     margin-top: 20px;    
     border-bottom: 1px dotted #6d6d6d;
 }
@@ -62,7 +63,7 @@ nav {
 
 .top-logo-wrapper {
     clear: both;
-    width: 1112px;
+    width: 1012px;
     height: 111px;
     margin: 0 auto;
     border-bottom: 1px solid #dddddd;
@@ -278,7 +279,7 @@ nav {
 }
 
 .main-wrapper {
-    width: 1112px;
+    width: 1012px;
     margin: 0 auto;
     margin-top: 20px;
 }
@@ -536,53 +537,54 @@ nav {
 
 .small-section-wrapper {
     min-height: 264px;
-    width: 544px;
+    width: 504px;
     margin-bottom: 20px;
     display: inline-block;
 }
 
 .inner-page-small-pic {
     float: left;
+    width: 185px;
 }
 
 .small-section-h {
     color: #cf0433;
-    margin-left: 263px;
+    margin-left: 205px;
     margin-top: 0;
 }
 
 .small-section-p1 {
-    margin-left: 263px;
+    margin-left: 205px;
     font-weight: bold;    
 }
 
 .small-section-p2 {
-    margin-left: 263px;
+    margin-left: 205px;
 }
 
 .small-section-p3 {
     width: 240px;
-    margin-left: 263px;
+    margin-left: 205px;
     font-style: italic;
     padding-bottom: 20px;
     border-bottom: 1px solid #d3d3d3;
 }
 
 .small-section-p4 {
-    margin-left: 263px;
+    margin-left: 205px;
     font-style: italic;
 }
 
 .inner-page-big-title {
     color: #d72c53;
     margin-top: 0;
-    padding: 15px;
+    padding: 0 0 15px 0;
 }
 
 .inner-page-smaller-title {
     color: #d72c53;
     margin-top: 0;
-    padding: 15px;
+    padding: 15px 15px 15px 0;
 }
 
 .location-icon {
@@ -595,7 +597,7 @@ nav {
 
 .location-wrapper {
     height: 38px;
-    margin: 15px;
+    margin: 15px 15px 15px 0;
 }
 
 .location-text {
@@ -610,21 +612,21 @@ nav {
     color: #161616;
     font-style: italic;
     padding-bottom: 20px;
-    padding: 15px;
+    padding: 15px 15px 15px 0;
     border-bottom: 1px solid #d1d1d1;
 }
 
 .address-wrapper {
     padding-bottom: 20px;
     margin-bottom: 20px;
-    padding: 15px;
+    padding: 15px 15px 15px 0;
     border-bottom: 1px solid #d1d1d1;
 }
 
 .social-icons {
     width: 191px;
     margin-bottom: 20px;
-    margin: 15px;
+    margin: 15px 15px 15px 0;
     padding-bottom: 10px;
     border-bottom: 1px dotted #d1d1d1;
 }
@@ -672,13 +674,13 @@ nav {
 .floating-logo {
     float: left;
     width: 333px;
-    margin-right: 156px;
+    margin-right: 106px;
 }
 
 .floating-logo-2 {
     float: left;
     width: 333px;
-    margin-right: 157px;
+    margin-right: 107px;
 }
 
 .floating-logo-3 {
@@ -701,8 +703,36 @@ nav {
 }
 
 .inner-page-p {
-    padding: 15px;
+    padding: 15px 15px 15px 0;
 }
+
+.inner-page-big-img {
+    width: 350px;
+    float: left;
+    margin-right: 60px;
+}
+
+.inner-page-text {
+    width: 600px;
+    float: left;
+}
+
+.inner-page-gallery-pic {
+    width: 187px;
+    display: inline-block;
+    margin-right: 15px;
+    margin-top: 14px;
+}
+
+.inner-page-gallery-pic:nth-child(4),.inner-page-gallery-pic:nth-child(5),.inner-page-gallery-pic:nth-child(6),.inner-page-gallery-pic:nth-child(7),.inner-page-gallery-pic:nth-child(8) {
+    margin-top: 0;
+}
+
+.inner-page-gallery-pic:nth-child(8) {
+    margin-right: 0;
+}
+
+
 
 
 
@@ -717,7 +747,7 @@ nav {
 
 .grid {
   max-width: 1200px;
-  margin-left: 42px;
+  /*margin-left: 42px;*/
 }
 
 .grid-2 {
@@ -739,12 +769,17 @@ nav {
   background-color: #f5f5f5;
 }
 
+.grid-item:nth-child(1),.grid-item:nth-child(2),.grid-item:nth-child(3) {
+  margin-top: 0;
+}
+
 .grid-item--width2 {
     width: 185px;
     margin-right: 20px;
 }
 .grid-item--width3 {
     width: 410px;
+    margin-right: 15px;
     position: relative;
 }
 
