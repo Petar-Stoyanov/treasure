@@ -83,7 +83,7 @@ function edit(&$FILTER,$errs = array()){
         if($FILTER['tab']==1) {
             $res = $mm->SelAssoc("	SELECT id, name, type_id, area_id, video_url as video, description, area_id, address,
                                     X(o.location) as location_x, Y(o.location) as location_y, working_time, description,
-                                    first_rel_place_id, second_rel_place_id, sorting_weight
+                                    first_rel_place_id, second_rel_place_id, sorting_weight, seo_url
                                     FROM treasure o
                                     WHERE id={$FILTER['id']}
                                 ");
@@ -160,6 +160,8 @@ function insertUpdate(&$FILTER) {
     $video = $FILTER['video'];
     $working_time = $FILTER['working_time'];
     $sorting_weight = $FILTER['sorting_weight'];
+    $seo_url = $FILTER['seo_url'];
+
     if($FILTER['id']>0) {
         $id = $FILTER['id'];
 //        $res = $mm->AutoExecute('area', $FILTER['item'], 2, "id={$FILTER['id']}", true);
@@ -169,11 +171,11 @@ function insertUpdate(&$FILTER) {
 
             $res = $mm->Query("UPDATE treasure SET name='{$name}', description='{$description}', location=GeomFromText('POINT({$location_x} {$location_y})'),
                                              area_id={$area}, type_id={$type}, working_time='{$working_time}', hist_period_id={$historical_period},
-                                              video_url='{$video}', sorting_weight={$sorting_weight} WHERE id={$id}");
+                                              video_url='{$video}', sorting_weight={$sorting_weight}, seo_url='{$seo_url}' WHERE id={$id}");
         }else{
             $res = $mm->Query("UPDATE treasure SET name='{$name}', description='{$description}', location=GeomFromText('POINT({$location_x} {$location_y})'),
                                     area_id={$area}, type_id={$type}, working_time='{$working_time}', hist_period_id={$historical_period},
-                                     video_url='{$video}', first_rel_place_id={$first_rel_place_id}, second_rel_place_id={$second_rel_place_id}, sorting_weight={$sorting_weight} WHERE id={$id}");
+                                     video_url='{$video}', first_rel_place_id={$first_rel_place_id}, second_rel_place_id={$second_rel_place_id}, sorting_weight={$sorting_weight}, seo_url='{$seo_url}' WHERE id={$id}");
         }
     } else {
 

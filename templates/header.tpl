@@ -35,7 +35,7 @@
 
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" rel="stylesheet">
 
-	<script type="text/javascript" src="styles/masonry.js"></script>
+	<script type="text/javascript" src="/styles/masonry.js"></script>
 
 	<link rel="stylesheet" type="text/css" href="/styles/main.css" />
 	
@@ -77,14 +77,14 @@
 	    <div class="top-logo-wrapper">
 	      <span>
 	        <!-- <a href="" class="logo-one"></a> -->
-	        <img src="img/logo-full.png" class="img-responsive floating-logo">
+	        <img src="/img/logo-full.png" class="img-responsive floating-logo">
 	      </span>
 	      <span>
 	        <!-- <a href="" class="logo-two"></a> -->
-	        <img src="img/middle-logo.png" class="img-responsive floating-logo-2">
+	        <img src="/img/middle-logo.png" class="img-responsive floating-logo-2">
 	      </span>
 	      <span>
 	        <!-- <a href="" class="logo-three"></a> -->
-	        <img src="img/cys.png" class="img-responsive floating-logo-3">
+	        <img src="/img/cys.png" class="img-responsive floating-logo-3">
 	      </span>
 	    </div>

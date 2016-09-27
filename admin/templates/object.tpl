@@ -222,7 +222,15 @@ js4="js/ajaxfileupload.js"
 														</div>
 													</div>
 													<!--[if !IE]>end row<![endif]-->
-
+													<!--[if !IE]>start row<![endif]-->
+													<div class="row">
+														<label>SEO url:</label>
+														<div class="twoSelectionsInRow">
+															<span class="input_wrapper"><input class="text" name="seo_url" type="text" value="{$FILTER.item.seo_url}"  validation="required"/></span>
+															{if $errs.seo_url}<span class="system negative">Mandatory field</span>{/if}
+														</div>
+													</div>
+													<!--[if !IE]>end row<![endif]-->
 													<!--[if !IE]>start row<![endif]-->
 													<div class="row">
 														<label>Address:</label>

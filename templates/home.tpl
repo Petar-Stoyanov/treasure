@@ -35,7 +35,7 @@
         {counter start=0 skip=1 assign="count"}
         {foreach from=$FILTER.slider item=slide}
           <div class="item {if $count eq 0}active{/if}">
-            <img src="image.php?mode=get&fl=banner&size=original&id={$slide.picture_id}" alt="" />
+            <img src="/image.php?mode=get&fl=banner&size=original&id={$slide.picture_id}" alt="" />
           </div>
         {counter}
         {/foreach}
@@ -89,8 +89,8 @@
 
           <div class="grid-item grid-item--width2">
            <!-- treasure/{$museum.name} -->
-            <a href="inner-page.php?object={$museum.name}">
-              <img src="image.php?mode=get&fl=museum_main_pic&size=small&id={$museum.id}" class="img-responsive cont-pic" alt="">
+            <a href="/treasure/{$museum.seo_url}">
+              <img src="/image.php?mode=get&fl=museum_main_pic&size=small&id={$museum.id}" class="img-responsive cont-pic" alt="">
             </a>
             <h4 class="inner-h">{$museum.name}</h4>
             <p class="inner-p-1">{$museum.area}</p>

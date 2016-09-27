@@ -1,0 +1,15 @@
+RewriteEngine On
+ 
+#RewriteRule ^(.*)$ http://treasure.ata48.com/$1 [L,R=301,NC]
+
+ 
+#Statics =========================================
+#RewriteCond  %{QUERY_STRING}  (.*)
+#RewriteRule ^general-terms-and-conditions$ /terms.php?%1 [L]
+#RewriteCond  %{QUERY_STRING}  (.*)
+#RewriteRule ^general-terms-and-conditions/$ /terms.php?%1 [L]
+
+#search
+RewriteCond  %{QUERY_STRING}  (.*)
+RewriteRule ^treasure/([^/]*)$ /inner-page.php?object=$1 [QSA,L]
+ 
