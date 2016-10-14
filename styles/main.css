@@ -289,15 +289,18 @@ nav {
     margin-right: 35px;
 }
 
-.inner-h {
+.article-text-holder {
+    background-color: #f5f5f5;
     padding: 0 15px;
+}
+
+.inner-h {
     margin: 0;
     padding-top: 15px;
     color: #c41845;
 }
 
 .inner-p-1 {
-    padding: 0 15px;
     margin: 0;
     padding-top: 10px;
     color: #000;
@@ -305,12 +308,10 @@ nav {
 }
 
 .inner-p-2 {
-    padding: 0 15px;
     margin: 0;
     padding-top: 10px;
     padding-bottom: 10px;
     color: #000;
-    background-color: #f5f5f5;
 }
 
 .map-text {
@@ -691,6 +692,7 @@ nav {
 .cont-pic {
     max-width: 185px;
     height: 135px;
+    margin: 0 auto;
 }
 
 .cont-pic-2 {
@@ -753,18 +755,88 @@ nav {
 }
 
 .static-pages-picture-title-picture-overlay {
-    background-color: rgba(195, 22, 68, 0.8);
+    background-color: rgba(177, 21, 68, 0.8);
     width: 100%;
     height: 173px;
     position: absolute;
     top: 0;
 }
 
+/*d?*/
 
+.size11 {
+    height: 450px;
+    width: 390px;
+}
 
+.size12 {
+    width: 201px;
+}
 
+.float-left {
+    float: left;
+}
 
+.float-right {
+    float: right;
+}
 
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+.rest-left {
+    margin-left: 244px;
+}
+
+.brick {
+    float: left;
+    cursor: default;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.full-width .float-left {
+    display: none;
+}
+
+.full-width .desc {
+    display: block;
+}
+
+.full-width.brick {
+    box-shadow: none;
+    overflow: visible;
+    border: none !important;
+    background: none !important;
+}
+
+.full-width.brick .cover {
+    margin: 0px 20px;
+    color: #333;
+}
+
+.full-width.brick .cover * {
+    text-shadow: none;
+}
+
+.full-width.brick .cover code {
+    color: #666;
+}
+
+/*dsgdssdgsfgfbfd*/
 
 
 
@@ -776,21 +848,18 @@ nav {
 
 .grid {
   max-width: 1200px;
-  /*margin-left: 42px;*/
+
 }
 
 .grid-2 {
     margin-left: 0;
 }
 
-/* clearfix */
 .grid:after {
   content: '';
   display: block;
   clear: both;
 }
-
-/* ---- grid-item ---- */
 
 .grid-item {
   float: left;
@@ -805,6 +874,7 @@ nav {
 .grid-item--width2 {
     width: 185px;
     margin-right: 20px;
+    margin-top: 20px !important;
 }
 .grid-item--width3 {
     width: 380px;
@@ -824,7 +894,3 @@ nav {
 .grid-item--width6 { 
     width: 600px;
 }
-
-/*.grid-item--height2 { height: 200px; }
-.grid-item--height3 { height: 260px; }
-.grid-item--height4 { height: 360px; }*/

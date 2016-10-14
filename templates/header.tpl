@@ -48,6 +48,8 @@
 	{if $js7}<script language="javascript" type="text/javascript" src="{$js7}"></script>{/if}
 	{if $js8}<script language="javascript" type="text/javascript" src="{$js8}"></script>{/if}
 	{if $js9}<script language="javascript" type="text/javascript" src="{$js9}"></script>{/if}
+	<script type="text/javascript" src="/styles/freewall.js"></script>
+	<script type="text/javascript" src="/styles/index.js"></script>
 
 </head>
 <body>
