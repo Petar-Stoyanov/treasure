@@ -732,6 +732,35 @@ nav {
     margin-right: 0;
 }
 
+.static-pages-picture-title {
+    width: 100%;
+    position: relative;
+}
+
+.static-pages-picture-title-text {
+    position: absolute;
+    color: #FFF;
+    left: 170px;
+    font-size: 58px;
+    font-weight: bold;
+    top: 25px;
+    z-index: 1;
+}
+
+.tatic-pages-picture-title-img {
+    width: 100%;
+    height: 173px;
+}
+
+.static-pages-picture-title-picture-overlay {
+    background-color: rgba(195, 22, 68, 0.8);
+    width: 100%;
+    height: 173px;
+    position: absolute;
+    top: 0;
+}
+
+
 
 
 
