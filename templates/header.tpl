@@ -50,7 +50,7 @@
 	{if $js9}<script language="javascript" type="text/javascript" src="{$js9}"></script>{/if}
 	<script type="text/javascript" src="/styles/freewall.js"></script>
 	<script type="text/javascript" src="/styles/index.js"></script>
-
+	
 </head>
 <body>
 {capture name=back_url}{query_str full_request_uri=true}{/capture}
