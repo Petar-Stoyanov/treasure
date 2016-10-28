@@ -2,16 +2,16 @@
 		<footer>
 		      <ul class="footer-ul">
 		        <li class="footer-li">
-		          <a href="" class="footer-a">За проекта |</a>
+		          <a href="http://treasure.ata48.com/about-the-project.php" class="footer-a">За проекта |</a>
 		        </li>
 		        <li class="footer-li">
-		          <a href="" class="footer-a">Екип |</a>
+		          <a href="http://treasure.ata48.com/team.php" class="footer-a">Екип |</a>
 		        </li>
 		        <li class="footer-li">
-		          <a href="" class="footer-a">Съмишленици |</a>
+		          <a href="http://treasure.ata48.com/followers.php" class="footer-a">Съмишленици |</a>
 		        </li>
 		        <li class="footer-li">
-		          <a href="" class="footer-a">Подкрепи каузата |</a>
+		          <a href="http://treasure.ata48.com/support-the-cause.php" class="footer-a">Подкрепи каузата |</a>
 		        </li>
 		        <li class="footer-li">
 		          <a href="" class="footer-a">Контакти</a>

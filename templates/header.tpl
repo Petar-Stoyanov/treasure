@@ -20,8 +20,6 @@
 	<link href="{$_config.base_url}/favicon.ico" rel="SHORTCUT ICON">
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">	
 	
-	
-	
 	{if $css1}<link href="{$css1}" rel="stylesheet" type="text/css" />{/if}
 	{if $css2}<link href="{$css2}" rel="stylesheet" type="text/css" />{/if}
 	{if $css3}<link href="{$css3}" rel="stylesheet" type="text/css" />{/if}
@@ -34,8 +32,6 @@
 	<script language="javascript" type="text/javascript" src="/styles/main.js"></script>
 
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" rel="stylesheet">
-
-	<script type="text/javascript" src="/styles/masonry.js"></script>
 
 	<link rel="stylesheet" type="text/css" href="/styles/main.css" />
 	
@@ -71,22 +67,25 @@
 	          <a href="" class="top-icon-two"></a>
 	        </span>
 	        <span>
-	          <a href="" class="top-text">HOME</a>
+	          <a href="http://treasure.ata48.com/" class="top-text">HOME</a>
 	        </span>
 	      </div>
 	    </div>
 
 	    <div class="top-logo-wrapper">
 	      <span>
-	        <!-- <a href="" class="logo-one"></a> -->
-	        <img src="/img/logo-full.png" class="img-responsive floating-logo">
+	        <a href="http://treasure.ata48.com/">
+	        	<img src="/img/logo-full.png" class="img-responsive floating-logo">
+	        </a>
 	      </span>
 	      <span>
-	        <!-- <a href="" class="logo-two"></a> -->
-	        <img src="/img/middle-logo.png" class="img-responsive floating-logo-2">
+	        <a href="http://treasure.ata48.com/map.php">
+	        	<img src="/img/middle-logo.png" class="img-responsive floating-logo-2">
+	        </a>
 	      </span>
 	      <span>
-	        <!-- <a href="" class="logo-three"></a> -->
-	        <img src="/img/cys.png" class="img-responsive floating-logo-3">
+	        <a href="http://www.cys.bg/" target="_blank">
+	        	<img src="/img/cys.png" class="img-responsive floating-logo-3">
+	        </a>
 	      </span>
 	    </div>

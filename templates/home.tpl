@@ -2,13 +2,11 @@
 	{capture name=back_url}{query_str full_request_uri=true ln=''}{/capture}
 
 <!-- HOME HTML -->
-
     <nav>
-      <a href="" class="nav-a">За проекта</a>
-      <a href="" class="nav-a">Екип</a>
-      <a href="" class="nav-a">Съмишленици</a>
-      <a href="" class="nav-a">Подкрепи каузата</a>
-      <a href="" class="nav-a">Контакти</a>
+      <a href="http://treasure.ata48.com/about-the-project.php" class="nav-a">За проекта</a>
+      <a href="http://treasure.ata48.com/team.php" class="nav-a">Екип</a>
+      <a href="http://treasure.ata48.com/followers.php" class="nav-a">Съмишленици</a>
+      <a href="http://treasure.ata48.com/support-the-cause.php" class="nav-a">Подкрепи каузата</a>
     </nav>
 
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -81,8 +79,8 @@
 
             <div class="map-text">
               <a href="" class="map-text-a">
-                <span class="map-text-inner">Потърси обект на картата</span>
-                <span class="map-icon"></span>
+                <div class="map-text-inner">Потърси обект на картата</div>
+                <div class="map-icon"></div>
               </a>
             </div>
           </div>
@@ -115,11 +113,7 @@
           <p class="inner-p-2">sds</p>
         </div> -->
 
-        
-
         </div>
-
-
 
         <button class="load-more">
           <span class="load-more-text">ЗАРЕДИ ОЩЕ</span>

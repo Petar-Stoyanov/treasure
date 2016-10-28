@@ -32,7 +32,7 @@ function show(&$FILTER, $errs = array()) {
 	}
 
 	$tpl->assign_by_ref('FILTER', $FILTER);
-    $tpl->display('static-page.tpl');
+    $tpl->display('followers.tpl');
 
 }
 ?>

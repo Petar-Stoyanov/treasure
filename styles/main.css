@@ -5,11 +5,6 @@ html, body {
     font-family: 'Open Sans', sans-serif;
 }
 
-/*body {
-    margin: 0;
-    font-family: 'Open Sans', sans-serif;
-}*/
-
 footer {
     padding: 20px 155px;
     background-color: #211f1e;
@@ -34,6 +29,7 @@ nav {
 
 .inner-holder {
     width: 136px;
+    font-size: 14px;
     margin: 0 auto;
 }
 
@@ -63,8 +59,12 @@ nav {
 
 .top-text {
     color: #131313;
-    text-decoration: none;
     padding-bottom: 5px;
+}
+
+.top-text:hover {
+    color: #131313;
+    text-decoration: none;
 }
 
 .top-logo-wrapper {
@@ -297,11 +297,12 @@ nav {
 
 .article-text-holder {
     background-color: #f5f5f5;
-    padding: 0 15px;
+    padding: 0 9px;
 }
 
 .inner-h {
     margin: 0;
+    font-size: 14px;
     padding-top: 15px;
     color: #c41845;
 }
@@ -309,6 +310,7 @@ nav {
 .inner-p-1 {
     margin: 0;
     padding-top: 10px;
+    font-size: 12px;
     color: #000;
     font-weight: bold;
 }
@@ -317,6 +319,7 @@ nav {
     margin: 0;
     padding-top: 10px;
     padding-bottom: 10px;
+    font-size: 12px;
     color: #000;
 }
 
@@ -330,14 +333,16 @@ nav {
 
 .map-text-inner {
     color: #FFF;
-    font-size: 24px;
-    padding-left: 22px;
+    font-size: 21px;
+    float: left;
+    padding-left: 14px;
 }
 
 .map-icon {
-    width: 35px;
-    height: 44px;
-    display: inline-block;
+    width: 25px;
+    height: 31px;
+    margin-left: 10px;
+    float: left;
     background: transparent url("../img/location.png") no-repeat scroll 0% 0%;
 
 }
@@ -544,14 +549,14 @@ nav {
 
 .small-section-wrapper {
     min-height: 264px;
-    width: 504px;
+    width: 506px;
     margin-bottom: 20px;
-    display: inline-block;
+    float: left;
 }
 
 .inner-page-small-pic {
     float: left;
-    width: 185px;
+    width: 171px;
 }
 
 .small-section-h {
@@ -579,6 +584,7 @@ nav {
 
 .small-section-p4 {
     margin-left: 205px;
+    padding-right: 35px;
     font-style: italic;
 }
 
@@ -618,22 +624,20 @@ nav {
 .object-text {
     color: #161616;
     font-style: italic;
+    margin: 0;
     padding-bottom: 20px;
     padding: 15px 15px 15px 0;
     border-bottom: 1px solid #d1d1d1;
 }
 
 .address-wrapper {
-    padding-bottom: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
     padding: 15px 15px 15px 0;
     border-bottom: 1px solid #d1d1d1;
 }
 
 .social-icons {
-    width: 191px;
-    margin-bottom: 20px;
-    margin: 15px 15px 15px 0;
+    width: 175px;
     padding-bottom: 10px;
     border-bottom: 1px dotted #d1d1d1;
 }
@@ -674,7 +678,6 @@ nav {
     width: 18px;
     height: 21px;
     display: inline-block;
-    margin-right: 15px;
     background: transparent url("../img/pinterest-black.png") no-repeat scroll 0% 0%;
 }
 
@@ -711,7 +714,7 @@ nav {
 }
 
 .inner-page-p {
-    padding: 15px 15px 15px 0;
+    margin: 25px 0;
 }
 
 .inner-page-big-img {
@@ -770,7 +773,23 @@ nav {
 
 #map {
     width: 100%;
-    height: 760px;
+    height: 740px;
+}
+
+.inner-page-top-content-holder {
+    height: 388px;
+}
+
+.overal-wrapper {
+    overflow: auto;
+}
+
+.social-icons > a {
+    text-decoration: none;
+}
+
+.static-page-section-content {
+    margin-bottom: 40px;
 }
 
 
@@ -791,20 +810,14 @@ nav {
 
 
 
-
-
-
-
-
-
-/*d?*/
+/*freewall js*/
 
 .size11 {
     height: 450px;
     width: 390px;
 }
 
-.size12 {
+.size21 {
     width: 201px;
 }
 
@@ -871,61 +884,4 @@ nav {
     color: #666;
 }
 
-/*dsgdssdgsfgfbfd*/
-
-
-
-
-
-
-/*---------------- masonry -----------------*/
-* { box-sizing: border-box; }
-
-.grid {
-  max-width: 1200px;
-
-}
-
-.grid-2 {
-    margin-left: 0;
-}
-
-.grid:after {
-  content: '';
-  display: block;
-  clear: both;
-}
-
-.grid-item {
-  float: left;
-  margin-top: 20px;
-  background-color: #f5f5f5;
-}
-
-.grid-item:nth-child(1),.grid-item:nth-child(2),.grid-item:nth-child(3) {
-  margin-top: 0;
-}
-
-.grid-item--width2 {
-    width: 185px;
-    margin-right: 20px;
-    margin-top: 20px !important;
-}
-.grid-item--width3 {
-    width: 380px;
-    margin-right: 15px;
-    position: relative;
-}
-
-.grid-item--width4 { 
-    width: 390px;
-    position: relative;
-}
-
-.grid-item--width5 { 
-    width: 380px; 
-    margin-right: 30px;
-}
-.grid-item--width6 { 
-    width: 600px;
-}
+/*freewall js*/
