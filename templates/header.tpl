@@ -16,7 +16,11 @@
 		<meta property="og:{$tagname}" content="{$tag}">
 		{/foreach}
 	{/if}
-	<link rel='shortcut icon' type='image/x-icon' href='img/favicon.ico' />
+	<!-- <link rel='shortcut icon' type='image/x-icon' href='img/favicon.ico' /> -->
+	<!-- <link href="{$_config.base_url}/favicon.ico" rel="SHORTCUT ICON"> -->
+	<link rel="shortcut icon" href="img/favicon.ico"/>
+	<link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
+	<link rel='shortcut icon' type='image/x-icon' href='img/favicon.png' />
 	<link href="{$_config.base_url}/favicon.ico" rel="SHORTCUT ICON">
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">	
 	
