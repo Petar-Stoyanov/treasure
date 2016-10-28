@@ -61,7 +61,7 @@
 	    <div class="top-wrapper">
 	      <div class="inner-holder">
 	        <span>
-	          <a href="" class="top-icon-one"></a>
+	          <a href="https://www.youtube.com/watch?v=inWSHeG3TZo&list=UUZSsguINde1y3lV0hAAVIHQ" class="top-icon-one" target="_blank"></a>
 	        </span>
 	        <span>
 	          <a href="" class="top-icon-two"></a>

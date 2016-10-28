@@ -8,7 +8,7 @@
 </nav>
 
 <div class="static-pages-picture-title">
-  <h2 class="static-pages-picture-title-text">followers</h2>
+  <h2 class="static-pages-picture-title-text">Съмишленици</h2>
   <img class="tatic-pages-picture-title-img" src="img/staticpg.jpg">
   <div class="static-pages-picture-title-picture-overlay"></div>
 </div>
