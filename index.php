@@ -34,6 +34,12 @@ function show(&$FILTER, $errs = array()) {
 								LEFT JOIN historical_period as hp ON hist_period_id=hp.id
 								WHERE t.is_deleted=0 ORDER BY t.sorting_weight ASC');
 
+/*	foreach($museums as &$mu){
+
+		$gallery = $mm->SelAssoc("SELECT picture_id FROM treasure_have_picture WHERE treasure_id = {$mu['id']}");
+		$mu['gallery'] = $gallery;
+	}
+*/
 	$slider = $mm->SelAssoc("SELECT picture_id, text, link FROM slider WHERE is_deleted=0");
 
 	$FILTER['museums'] = $museums;

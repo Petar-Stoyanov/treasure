@@ -222,9 +222,19 @@ if(!isset($_SESSION['ln'])) $_SESSION['ln']=2;
 				$original_photo = $data['original_photo'];
 				$small_photo = $data['small_photo'];
 				$image_type = $data['image_type'];
-				$mm->Query("INSERT INTO pictures(original_photo, small_photo, image_type) VALUES('{$original_photo}', '{$small_photo}', '{$image_type}')");
+				$photoCount = $mm->SelOne("SELECT COUNT(*) FROM physical_pictures");
+				$photoCount++;
+				$photoName = "treasure_picture_{$photoCount}.jpg";
+				
+				//file_put_contents('../upload_images/' . $photoName, $_FILES[$fileElementName]['tmp_name']);
+				//var_dump($data['original_photo']);
+				//echo $photoName;
+				//die();
+				file_put_contents('../upload_images/' . $photoName, base64_decode($original_photo));
+				//move_uploaded_file($original_photo, "../upload_images/{$photoName}");
 
-
+				$mm->Query("INSERT INTO physical_pictures(photo) VALUES('{$photoName}')");
+				
 				$tbl = $FILTER['tbl'];
 				if($tbl == "related_places"){
 					$newId = $mm->GetId();
@@ -237,7 +247,7 @@ if(!isset($_SESSION['ln'])) $_SESSION['ln']=2;
 
 				}else if($tbl == "treasureGallery"){
 					$newId = $mm->GetId();
-					$mm->Query("INSERT INTO treasure_have_picture(treasure_id, picture_id) VALUES({$FILTER['id']}, {$newId})");
+					$mm->Query("INSERT INTO treasure_have_physical_picture(treasure_id, picture_id) VALUES({$FILTER['id']}, {$newId})");
 
 				}else if($tbl == "treasure"){
 					$newId = $mm->GetId();

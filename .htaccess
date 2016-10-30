@@ -13,3 +13,11 @@ RewriteEngine On
 RewriteCond  %{QUERY_STRING}  (.*)
 RewriteRule ^treasure/([^/]*)$ /inner-page.php?object=$1 [QSA,L]
  
+
+<FilesMatch "\.(?i:gif|jpe?g|png|ico|css|js|swf)$">
+
+  <IfModule mod_headers.c>
+    Header set Cache-Control "max-age=172800, public, must-revalidate"
+  </IfModule>
+
+</FilesMatch>
