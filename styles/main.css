@@ -789,20 +789,12 @@ nav {
 }
 
 .static-page-section-content {
-    margin-bottom: 40px;
+    margin: 60px 0;
 }
 
-.static-page-section-content > h3:nth-child(1) {
-    text-align: center;
-    margin: 50px 0 0;
+.inner-page-big-img > iframe {
+    height: 370px;
 }
-
-.static-page-section-content > h3:nth-child(2) {
-    text-align: center;
-    margin: 10px 0 40px;
-}
-
-
 
 
 
