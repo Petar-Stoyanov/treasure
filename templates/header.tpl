@@ -16,8 +16,7 @@
 		<meta property="og:{$tagname}" content="{$tag}">
 		{/foreach}
 	{/if}
-	<!-- <link rel='shortcut icon' type='image/x-icon' href='img/favicon.ico' /> -->
-	<!-- <link href="{$_config.base_url}/favicon.ico" rel="SHORTCUT ICON"> -->
+
 	<link rel="shortcut icon" href="img/favicon.ico"/>
 	<link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
 	<link rel='shortcut icon' type='image/x-icon' href='img/favicon.png' />
@@ -32,6 +31,9 @@
 	<script language="javascript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
 	<script language="javascript" type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+	<link href="/styles/lightbox.css" rel="stylesheet">
+	<script src="/styles/lightbox.js"></script>
 
 	<script language="javascript" type="text/javascript" src="/styles/main.js"></script>
 
