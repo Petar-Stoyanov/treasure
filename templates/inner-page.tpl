@@ -30,10 +30,15 @@
             <p class="object-text">Исторически обект</p>
 
             <div class="address-wrapper">
-              <span>Адрес:</span>
-              <span>{$FILTER.museum.name}</span>
-              <span>Работно време:</span>
-              <span>{$FILTER.museum.working_time}</span>
+              <div class="inner-page-adress-holder">
+                <span>Адрес:</span>
+                <span>{$FILTER.museum.name}</span>
+              </div>
+
+              <div class="inner-page-time-holder">
+                <span>Работно време:</span>
+                <span>{$FILTER.museum.working_time}</span>
+              </div>
             </div>
 
             <div class="social-icons">
@@ -111,23 +116,27 @@
       <div class="overal-wrapper">
 	{if isset($FILTER.museum.first_related_place)}
         <div class="small-section-wrapper">
-          <a href="{$FILTER.museum.first_related_place.link}" target="_blank">
-	  	<img class="inner-page-small-pic" src="../upload_images/treasure_picture_{$FILTER.museum.first_related_place.picture_id}.jpg">
-          	<h3 class="small-section-h">{$FILTER.museum.first_related_place.name}</h3>
-	  </a>
-          <p class="small-section-p1">{$FILTER.museum.first_related_place.area}</p>
-          <p class="small-section-p2">{$FILTER.museum.first_related_place.type}</p>
+          <div class="anchor-wrapper">
+            <a href="{$FILTER.museum.first_related_place.link}" target="_blank">
+  	  	      <img class="inner-page-small-pic" src="../upload_images/treasure_picture_{$FILTER.museum.first_related_place.picture_id}.jpg">
+            	<h3 class="small-section-h">{$FILTER.museum.first_related_place.name}</h3>
+            </a>
+            <p class="small-section-p1">{$FILTER.museum.first_related_place.area}</p>
+            <p class="small-section-p2">{$FILTER.museum.first_related_place.type}</p>
+          </div>
           <p class="small-section-p4" id="suggestion-location1">{$FILTER.museum.first_related_place.description}</p>
         </div>
 	{/if}
 	{if isset($FILTER.museum.second_related_place)}
         <div class="small-section-wrapper">
-          <a href="{$FILTER.museum.second_related_place.link}" target="_blank">
-	  	<img class="inner-page-small-pic" src="../upload_images/treasure_picture_{$FILTER.museum.second_related_place.picture_id}.jpg">
-          	<h3 class="small-section-h">{$FILTER.museum.second_related_place.name}</h3>
-	  </a>
-          <p class="small-section-p1">{$FILTER.museum.second_related_place.area}</p>
-          <p class="small-section-p2">{$FILTER.museum.second_related_place.type}</p>
+          <div class="anchor-wrapper">
+            <a href="{$FILTER.museum.second_related_place.link}" target="_blank">
+  	  	      <img class="inner-page-small-pic" src="../upload_images/treasure_picture_{$FILTER.museum.second_related_place.picture_id}.jpg">
+            	<h3 class="small-section-h">{$FILTER.museum.second_related_place.name}</h3>
+            </a>
+            <p class="small-section-p1">{$FILTER.museum.second_related_place.area}</p>
+            <p class="small-section-p2">{$FILTER.museum.second_related_place.type}</p>
+          </div>
           <p class="small-section-p4" id="suggestion-location2">{$FILTER.museum.second_related_place.description}</p>
         </div>
 	{/if}

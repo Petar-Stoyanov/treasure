@@ -104,6 +104,16 @@
           </div>
         </div>
 
+        <div class="map-popup">
+          <img src="img/small-test-pic2.png" class="img-responsive popup-img">
+          <h2 class="popup-h2">Наименование на артефакта</h3>
+          <p class="popup-p1">Населено място</p>
+          <p class="popup-p2">Вид обект</p>
+          <p class="popup-p3">Исторически обект</p>
+          <p class="popup-p4">Текст?...</p>
+          <button class="popup-btn">Научи повече</button>
+        </div>
+
         <div id="map"></div>
 
         {literal}

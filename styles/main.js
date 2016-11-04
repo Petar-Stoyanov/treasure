@@ -21,15 +21,15 @@ $(document).ready(function() {
 	var elem = $("#suggestion-location1");
 
     if(elem){
-        if (elem.text().length > 60);
-            elem.text(elem.text().substr(0, 60) + " ...");
+        if (elem.text().length > 330);
+            elem.text(elem.text().substr(0, 330) + " ...");
     }
 
     var elem2 = $("#suggestion-location2");
 
     if(elem2){
-        if (elem2.text().length > 60);
-            elem2.text(elem2.text().substr(0, 60) + " ...");
+        if (elem2.text().length > 330);
+            elem2.text(elem2.text().substr(0, 330) + " ...");
     }
 
 });

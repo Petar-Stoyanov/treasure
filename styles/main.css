@@ -549,12 +549,20 @@ nav {
 
 .small-section-wrapper {
     min-height: 264px;
-    width: 506px;
+    width: 470px;
     margin-bottom: 20px;
     float: left;
 }
 
-.small-section-wrapper > a:hover {
+.small-section-wrapper:nth-child(1) {
+    min-height: 264px;
+    width: 480px;
+    margin-bottom: 20px;
+    margin-right: 62px;
+    float: left;
+}
+
+.anchor-wrapper > a:hover {
     text-decoration: none;
 }
 
@@ -565,21 +573,22 @@ nav {
 .inner-page-small-pic {
     float: left;
     width: 171px;
+    max-height: 130px;
 }
 
 .small-section-h {
     color: #cf0433;
-    margin-left: 205px;
+    margin-left: 195px;
     margin-top: 0;
 }
 
 .small-section-p1 {
-    margin-left: 205px;
+    margin-left: 197px;
     font-weight: bold;    
 }
 
 .small-section-p2 {
-    margin-left: 205px;
+    margin-left: 197px;
 }
 
 .small-section-p3 {
@@ -591,8 +600,7 @@ nav {
 }
 
 .small-section-p4 {
-    margin-left: 205px;
-    padding-right: 35px;
+    margin-top: 10px;
     font-style: italic;
 }
 
@@ -606,6 +614,10 @@ nav {
     color: #d72c53;
     margin-top: 0;
     padding: 15px 15px 15px 0;
+}
+
+.anchor-wrapper {
+    min-height: 130px;
 }
 
 .location-icon {
@@ -640,8 +652,18 @@ nav {
 
 .address-wrapper {
     margin-bottom: 18px;
-    padding: 15px 15px 15px 0;
+    padding: 15px 0;
+    overflow: hidden;
     border-bottom: 1px solid #d1d1d1;
+}
+
+.inner-page-adress-holder {
+    float: left;
+}
+
+.inner-page-time-holder {
+    float: right;
+    max-width: 400px;
 }
 
 .social-icons {
@@ -722,7 +744,7 @@ nav {
 }
 
 .inner-page-p {
-    margin: 25px 0;
+    margin: 35px 0;
 }
 
 .inner-page-big-img {
@@ -784,8 +806,69 @@ nav {
     height: 740px;
 }
 
+.map-popup {
+    display: none;
+    position: absolute;
+    width: 550px;
+    overflow: hidden;
+    z-index: 1;
+    background-color: #FFF;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 330px;
+    margin: auto;
+}
+
+.popup-img {
+    max-width: 160px;
+    float: left;
+    margin: 20px 20px 0 20px;
+}
+
+.popup-h2 {
+    float: left;
+    color: #C41644;
+    width: 350px;
+}
+
+.popup-p1,
+.popup-p2,
+.popup-p3 {
+    float: left;
+    width: 300px;
+}
+
+.popup-p1 {
+    font-weight: bold;
+}
+
+.popup-p3 {
+    font-style: italic;
+    border-bottom: 1px solid #dddddd;
+    padding-bottom: 22px;
+}
+
+.popup-p4 {
+    width: 350px;
+    padding-right: 40px;
+    float: right;
+    font-style: italic;
+}
+
+.popup-btn {
+    float: right;
+    margin-right: 194px;
+    background-color: #C41644;
+    border: none;
+    color: #FFF;
+    padding: 5px 30px;
+    margin-top: 20px;
+}
+
 .inner-page-top-content-holder {
-    height: 388px;
+    overflow: hidden;
 }
 
 .overal-wrapper {
