@@ -729,7 +729,7 @@ nav {
 }
 
 .cont-pic {
-    max-width: 185px;
+    /*max-width: 185px;*/
     height: 135px;
     margin: 0 auto;
 }
@@ -890,15 +890,6 @@ nav {
 
 
 
-
-
-
-
-
-
-
-
-
 /*freewall js*/
 
 .size11 {
@@ -972,5 +963,4 @@ nav {
 .full-width.brick .cover code {
     color: #666;
 }
-
 /*freewall js*/

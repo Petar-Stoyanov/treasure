@@ -1,4 +1,4 @@
-{include file="templates/header.tpl"}
+﻿{include file="templates/header.tpl"}
 	{capture name=back_url}{query_str full_request_uri=true ln=''}{/capture}
 
 <!-- HOME HTML -->
@@ -34,6 +34,7 @@
         {foreach from=$FILTER.slider item=slide}
           <div class="item {if $count eq 0}active{/if}">
             <img src="/image.php?mode=get&fl=banner&size=original&id={$slide.picture_id}" alt="" />
+		
           </div>
         {counter}
         {/foreach}
@@ -70,15 +71,14 @@
     <div class="main-wrapper">
 
       <div class="map-wrapper">
-        <!-- <div class="grid js-masonry"> -->
+
         <div id="freewall" class="free-wall">
 
-          <!-- <div class="grid-item grid-item--width3"> -->
           <div class="brick size11">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4062.3559569188005!2d25.61438989906971!3d43.077158379987075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40a9214b3d9491dd%3A0x400a01269bf5dc0!2z0JLQtdC70LjQutC-INCi0YrRgNC90L7QstC-!5e0!3m2!1sbg!2sbg!4v1474533632666" width="100%" height="450px" frameborder="0" style="border:0" allowfullscreen></iframe>
 
             <div class="map-text">
-              <a href="" class="map-text-a">
+              <a href="http://treasure.ata48.com/map.php" class="map-text-a">
                 <div class="map-text-inner">Потърси обект на картата</div>
                 <div class="map-icon"></div>
               </a>
@@ -87,11 +87,12 @@
           
           {foreach from=$FILTER.museums item=museum}
 
-          <!-- <div class="grid-item grid-item--width2"> -->
           <div class="brick size21">
            <!-- treasure/{$museum.name} -->
             <a href="/treasure/{$museum.seo_url}">
-              <img src="/image.php?mode=get&fl=museum_main_pic&size=small&id={$museum.id}" class="img-responsive cont-pic" alt="">
+              <!-- {*<img src="/image.php?mode=get&fl=museum_main_pic&size=small&id={$museum.id}" class="img-responsive cont-pic" alt="">*} -->
+
+		          <img src="./upload_images/treasure_picture_{$museum.main_pic_id}_cropped.jpg" class="img-responsive cont-pic" alt="" style="width:155px;"/>
             </a>
 
             <div class="article-text-holder">
@@ -120,7 +121,7 @@
           <span class="load-more-icon"></span>
         </button>
 
-        <div class="lower-section-wrapper">
+        <!-- <div class="lower-section-wrapper">
           <a href="" class="lower-section-a">Партньори</a>
           <div>
             <span class="lower-section-icon-1"></span>
@@ -129,7 +130,7 @@
             <span class="lower-section-icon-4"></span>
             <span class="lower-section-icon-5"></span>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
 

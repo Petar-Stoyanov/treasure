@@ -122,7 +122,7 @@
           <span class="load-more-icon"></span>
         </button>
 
-        <div class="lower-section-wrapper">
+        <!-- <div class="lower-section-wrapper">
           <a href="" class="lower-section-a">Партньори</a>
           <div>
             <span class="lower-section-icon-1"></span>
@@ -131,7 +131,7 @@
             <span class="lower-section-icon-4"></span>
             <span class="lower-section-icon-5"></span>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
 
