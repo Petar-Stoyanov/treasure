@@ -19,7 +19,7 @@
 		      </ul>
 
 		      <ul class="footer-ul-2">
-		        <a href="https://www.youtube.com/watch?v=inWSHeG3TZo&list=UUZSsguINde1y3lV0hAAVIHQ" target="_blank">
+		        <a href="">
 		          <li class="footer-li-2 li-2-1"></li>
 		        </a>
 		        <a href="">
@@ -28,7 +28,7 @@
 		        <a href="">
 		          <li class="footer-li-2 li-2-3"></li>
 		        </a>
-		        <a href="">
+		        <a href="https://www.youtube.com/watch?v=inWSHeG3TZo&list=UUZSsguINde1y3lV0hAAVIHQ" target="_blank">
 		          <li class="footer-li-2 li-2-4"></li>
 		        </a>
 		        <a href="">

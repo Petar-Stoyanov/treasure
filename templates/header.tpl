@@ -67,10 +67,10 @@
 	    <div class="top-wrapper">
 	      <div class="inner-holder">
 	        <span>
-	          <a href="https://www.youtube.com/watch?v=inWSHeG3TZo&list=UUZSsguINde1y3lV0hAAVIHQ" class="top-icon-one" target="_blank"></a>
+	          <a href="#" class="top-icon-one" target="_blank"></a>
 	        </span>
 	        <span>
-	          <a href="" class="top-icon-two"></a>
+	          <a href="https://www.youtube.com/watch?v=inWSHeG3TZo&list=UUZSsguINde1y3lV0hAAVIHQ" class="top-icon-two" target="_blank"></a>
 	        </span>
 	        <span>
 	          <a href="http://treasure.ata48.com/" class="top-text">HOME</a>
