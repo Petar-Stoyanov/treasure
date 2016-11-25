@@ -86,15 +86,16 @@ nav {
 
 .side-menu-wrapper {
     position: absolute;
+    width: 270px;
     z-index: 1;
     top: 10px;
-    right: 0;
+    right: 12px;
 }
 
 .side-menu-title {
     background-color: #FFF;
     width: 270px;
-    height: 72px;
+    height: 67px;
     cursor: pointer;
     padding: 12px 0 0 25px;
 }
@@ -114,14 +115,17 @@ nav {
 }
 
 .side-menu-icon {
-    width: 35px;
-    height: 44px;
+    width: 25px;
+    height: 31px;
+    margin-top: 7px;
     display: inline-block;
     float: left;
     background: transparent url("../img/location.png") no-repeat scroll 0% 0%;
 }
 
 .side-menu-ul {
+    max-height: 187px;
+    overflow: auto;
     list-style-type: none;
     background-color: #FFF;
     padding: 0;
@@ -166,14 +170,15 @@ nav {
 .side-menu-ul-i-4 {
     width: 31px;
     height: 29px;
-    margin-left: 15px;
-    display: block;
+    margin-left: 10px;
     float: left;
     background: transparent url("../img/museum.png") no-repeat scroll 0% 0%;
 }
 
 .side-menu-ul-text-4 {
     margin-left: 11px;
+    float: left;
+    width: 178px;
 }
 
 .side-menu-ul-text {
@@ -187,6 +192,7 @@ nav {
 
 .side-menu-ul-anchor {
     color: #121212;
+    cursor: pointer;
 }
 
 .side-menu-ul-anchor:hover {
@@ -807,30 +813,31 @@ nav {
 }
 
 .map-popup {
-    display: none;
-    position: absolute;
+    /*display: none;*/
+    /*position: absolute;*/
     width: 550px;
     overflow: hidden;
     z-index: 1;
     background-color: #FFF;
-    top: 0;
+    /*top: 0;
     left: 0;
     bottom: 0;
-    right: 0;
-    height: 330px;
+    right: 0;*/
+    /*height: 330px;*/
     margin: auto;
 }
 
 .popup-img {
-    max-width: 160px;
+    max-width: 160px !important;
     float: left;
-    margin: 20px 20px 0 20px;
+    margin: 5px 20px 0 0;
 }
 
 .popup-h2 {
     float: left;
     color: #C41644;
     width: 350px;
+    margin-top: 4px;
 }
 
 .popup-p1,
@@ -847,24 +854,31 @@ nav {
 .popup-p3 {
     font-style: italic;
     border-bottom: 1px solid #dddddd;
-    padding-bottom: 22px;
+    padding-bottom: 12px;
 }
 
 .popup-p4 {
     width: 350px;
-    padding-right: 40px;
-    float: right;
+    /*padding-right: 40px;*/
+    float: left;
     font-style: italic;
 }
 
 .popup-btn {
     float: right;
     margin-right: 194px;
+    transition: background-color 0.5s ease;
     background-color: #C41644;
+    border-radius: 0;
     border: none;
     color: #FFF;
     padding: 5px 30px;
     margin-top: 20px;
+}
+
+.popup-btn:hover {
+    color: #FFF;
+    background-color: #910f32;
 }
 
 .inner-page-top-content-holder {
