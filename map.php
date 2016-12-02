@@ -24,6 +24,14 @@ switch ($FILTER['mode']) {
 
 function show(&$FILTER, $errs = array()) {
 	global $PAGE_TITLE, $_cache, $mm, $_config;
+	$area = $mm->SelAssoc('SELECT id, name_bg as name ,X(location) as x, Y(location) as y FROM area WHERE is_deleted = 0');
+	$FILTER['area'] = $area;
+
+ 	$historical_period = $mm->SelAssoc('SELECT id, name FROM historical_period WHERE is_deleted = 0');
+	$FILTER['historical_period'] = $historical_period;
+
+	$type = $mm->SelAssoc('SELECT id, name FROM type WHERE is_deleted = 0');
+	$FILTER['type'] = $type;
 
 	$tpl = new Template_Lite();
 	if(!empty($errs)) {

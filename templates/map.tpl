@@ -50,7 +50,7 @@
               {foreach from=$FILTER.type item=type}
                 <a class="side-menu-ul-anchor type-anchor" type="{$type.id}">
                   <li class="side-menu-ul-white-li">
-                    <div class="side-menu-ul-i-4"></div>
+                    <div class="side-bar-type-icon side-menu-ul-i-4"></div>
                     <div class="side-menu-ul-text-4">{$type.id} - {$type.name}</div>
                   </li>
                 </a>
@@ -104,6 +104,7 @@
 
         {literal}
           <script>
+
             var map;
             $('.type-anchor').click(function(){
               $("input[name='set-type']").val($(this).attr('type'));
@@ -123,6 +124,8 @@
             var reqUrl = location.protocol + '//' + window.location.hostname + '/ajaxrequest.php';
 
             var markers = [];
+
+
             var infoWindowContent = [];
             $.ajax({
                 url: reqUrl,
@@ -141,7 +144,8 @@
                     // info += '</div>';
 
                     var info = '<div class="info_content map-popup">';
-                    info += '<img src="img/small-test-pic2.png" class="img-responsive popup-img">';
+
+                    info += '<img src="./upload_images/treasure_picture_' + element.main_pic_id + '_cropped.jpg" class="img-responsive popup-img">';
 
                     info += '<h2 class="popup-h2">' + element.name + '</h2>';
 
@@ -207,7 +211,7 @@
                       // info += '</div>';
 
                       var info = '<div class="info_content map-popup">';
-                      info += '<img src="img/small-test-pic2.png" class="img-responsive popup-img">';
+                      info += '<img src="./upload_images/treasure_picture_' + element.main_pic_id + '_cropped.jpg" class="img-responsive popup-img">';
 
                       info += '<h2 class="popup-h2">' + element.name + '</h2>';
 
@@ -258,6 +262,7 @@
                 marker = new google.maps.Marker({
                   position: position,
                   map: map,
+                  animation: google.maps.Animation.DROP,
                   title: markers[i][0]
                 });
 
