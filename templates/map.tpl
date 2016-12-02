@@ -45,8 +45,20 @@
               <input type="hidden" name="set-area" />
               <input type="hidden" name="set-type" />
               <input type="hidden" name="set-historical_period" />
-
+              
               {counter start=0 skip=1 assign="count"}
+              {foreach from=$FILTER.type item=type}
+                <a class="side-menu-ul-anchor type-anchor" type="{$type.id}">
+                  <li class="side-menu-ul-white-li catch-li-click-1">
+                    <div class="side-bar-type-icon_{$type.id}"></div>
+                    <!-- <div class="side-menu-ul-text-4">{$type.id} - {$type.name}</div> -->
+                    <div class="side-menu-ul-text-4">{$type.name}</div>
+                  </li>
+                </a>
+                {counter}
+              {/foreach}
+
+              <!-- {counter start=0 skip=1 assign="count"}
               {foreach from=$FILTER.type item=type}
                 <a class="side-menu-ul-anchor type-anchor" type="{$type.id}">
                   <li class="side-menu-ul-white-li">
@@ -55,7 +67,7 @@
                   </li>
                 </a>
                 {counter}
-              {/foreach}
+              {/foreach} -->
               
             </ul>
 
@@ -64,7 +76,7 @@
               {counter start=0 skip=1 assign="count"}
               {foreach from=$FILTER.historical_period item=historical_period}
                 <a class="side-menu-ul-anchor historical_period-anchor" historical_period="{$historical_period.id}">
-                  <li class="side-menu-ul-white-li">
+                  <li class="side-menu-ul-white-li catch-li-click-2">
                     <span class="side-menu-ul-text-4">{$historical_period.name}</span>
                   </li>
                 </a> 
@@ -80,7 +92,7 @@
               {counter start=0 skip=1 assign="count"}
               {foreach from=$FILTER.area item=area}
                 <a class="side-menu-ul-anchor area-anchor" area="{$area.id}">
-                  <li class="side-menu-ul-white-li">
+                  <li class="side-menu-ul-white-li catch-li-click-3">
                     <span class="side-menu-ul-text-4">{$area.name}</span>
                   </li>
                 </a> 
@@ -105,7 +117,24 @@
         {literal}
           <script>
 
+            // add gray bg to the clicked li in the search menu
+            $(document).on('click', ".catch-li-click-1", function() {
+              $(".catch-li-click-1").removeClass("list-gray-bg");
+              $(this).addClass("list-gray-bg");
+            });
+
+            $(document).on('click', ".catch-li-click-2", function() {
+              $(".catch-li-click-2").removeClass("list-gray-bg");
+              $(this).addClass("list-gray-bg");
+            });
+
+            $(document).on('click', ".catch-li-click-3", function() {
+              $(".catch-li-click-3").removeClass("list-gray-bg");
+              $(this).addClass("list-gray-bg");
+            });
+
             var map;
+
             $('.type-anchor').click(function(){
               $("input[name='set-type']").val($(this).attr('type'));
               setAndChange();
@@ -125,8 +154,8 @@
 
             var markers = [];
 
-
             var infoWindowContent = [];
+
             $.ajax({
                 url: reqUrl,
                 success: function(result) {
@@ -145,19 +174,23 @@
 
                     var info = '<div class="info_content map-popup">';
 
-                    info += '<img src="./upload_images/treasure_picture_' + element.main_pic_id + '_cropped.jpg" class="img-responsive popup-img">';
+                      info += '<img src="./upload_images/treasure_picture_' + element.main_pic_id + '_cropped.jpg" class="img-responsive popup-img">';
+                      
+                      info += '<div class="pop-up-text-holder"';
 
-                    info += '<h2 class="popup-h2">' + element.name + '</h2>';
+                        info += '<h2 class="popup-h2">' + element.name + '</h2>';
 
-                    info += '<p class="popup-p1">' + element.area + '</p>';
-                    
-                    info += '<p class="popup-p2">' + element.type + '</p>';
-                    
-                    info += '<p class="popup-p3">' + element.historical_period + '</p>';
+                        info += '<p class="popup-p1">' + element.area + '</p>';
+                        
+                        info += '<p class="popup-p2">' + element.type + '</p>';
+                        
+                        info += '<p class="popup-p3">' + element.historical_period + '</p>';
 
-                    info += '<p class="popup-p4">' + element.description.substr(0, 200) + '&nbsp;&nbsp;...' + '</p>';
+                        info += '<p class="popup-p4">' + element.description.substr(0, 200) + '&nbsp;&nbsp;...' + '</p>';
 
-                    info += '<a class="btn btn-default popup-btn" href="treasure/' + element.seo_url + '">'+ 'Научете повече' + '</a>';
+                      info += '</div>';
+
+                      info += '<a class="btn btn-default popup-btn" href="treasure/' + element.seo_url + '">'+ 'Научете повече' + '</a>';
 
                     info += '</div>';
 
@@ -211,6 +244,7 @@
                       // info += '</div>';
 
                       var info = '<div class="info_content map-popup">';
+
                       info += '<img src="./upload_images/treasure_picture_' + element.main_pic_id + '_cropped.jpg" class="img-responsive popup-img">';
 
                       info += '<h2 class="popup-h2">' + element.name + '</h2>';
@@ -254,6 +288,21 @@
 
               var infoWindow = new google.maps.InfoWindow(), marker, i;
 
+              // var icons = {
+              //   chitalishte: {
+              //     icon: 'img/small-building.png'
+              //   },
+              //   ethnoGathering: {
+              //     icon: 'img/gathering.png';
+              //   },
+              //   museum: {
+              //     icon: 'img/museum.png';
+              //   },
+              //   library: {
+              //     icon: 'img/library.png';
+              //   }
+              // };
+
               for( i = 0; i < markers.length; i++ ) {
                 var position = new google.maps.LatLng(markers[i][1], markers[i][2]);
 
@@ -264,7 +313,28 @@
                   map: map,
                   animation: google.maps.Animation.DROP,
                   title: markers[i][0]
+                  // icon: icons[feature.type].icon
                 });
+
+                // var features = [
+                //   {
+                //     // position: new google.maps.LatLng(-33.91721, 151.22630),
+                //     type: 'chitalishte'
+                //   }, {
+                //     // position: new google.maps.LatLng(-33.91539, 151.22820),
+                //     type: 'ethnoGathering'
+                //   }, {
+                //     // position: new google.maps.LatLng(-33.91747, 151.22912),
+                //     type: 'museum'
+                //   }, {
+                //     // position: new google.maps.LatLng(-33.91727341958453, 151.23348314155578),
+                //     type: 'library'
+                //   }
+                // ];
+
+                // for (var i = 0, feature; feature = features[i]; i++) {
+                //   addMarker(feature);
+                // };
 
                 // Allow each marker to have an info window    
                 google.maps.event.addListener(marker, 'click', (function(marker, i) {
