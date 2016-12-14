@@ -20,20 +20,23 @@ $(document).ready(function() {
 	// newArray = newArray.toString();
 	// el2 = newArray;
 
-	if(el2.length > 330) {
+	// if(el2.length > 330) {
 		// split the text and make it an array
-    	var newArray = el2.split(" ");
+		function shortenRelatedPlaceText() {
+	    	var newArray = el2.split(" ");
 
-    	// get the amout of elements in the array in order to have ending point to which you cut the text
-		var lastArrayEl = newArray.length;
+	    	// get the amout of elements in the array in order to have ending point to which you cut the text
+			var lastArrayEl = newArray.length;
 
-		newArray.splice(20, lastArrayEl);
-		newArray = newArray.join(" ");
-		el2 = newArray;
-		// el2 = $("#suggestion-location1").text(el2);
-		el2 = $("#suggestion-location1").text(el2) + "+++";
-		el2 += "...";
-    }
+			newArray.splice(20, lastArrayEl);
+			newArray = newArray.join(" ");
+			el2 = newArray;
+			// el2 = $("#suggestion-location1").text(el2);
+			el2 = $("#suggestion-location1").text(el2) + "+++";
+			el2 += "...";
+		}
+		shortenRelatedPlaceText();
+    // }
 
 	// var elem = $("#suggestion-location1");
 
@@ -58,16 +61,17 @@ $(document).ready(function() {
 		 		el2 = $("#suggestion-location1").text(initialEl);
 		    } else {
 		    	// split the text and make it an array
-		    	var newArray = el2.split(" ");
+		  //   	var newArray = el2.split(" ");
 
-		    	// get the amout of elements in the array in order to have ending point to which you cut the text
-				var lastArrayEl = newArray.length;
+		  //   	// get the amout of elements in the array in order to have ending point to which you cut the text
+				// var lastArrayEl = newArray.length;
 
-				newArray.splice(20, lastArrayEl);
-				newArray = newArray.join(" ");
-				el2 = newArray;
-				el2 = $("#suggestion-location1").text(el2) + "+++";
-				el2 += "...";
+				// newArray.splice(20, lastArrayEl);
+				// newArray = newArray.join(" ");
+				// el2 = newArray;
+				// el2 = $("#suggestion-location1").text(el2) + "+++";
+				// el2 += "...";
+				shortenRelatedPlaceText();
 		    }
 		// }
 	});
