@@ -6,7 +6,7 @@ html, body {
 }
 
 footer {
-    padding: 20px 155px;
+    padding: 20px 170px;
     background-color: #211f1e;
     border-top: 4px solid #c41644;
 }
@@ -72,6 +72,7 @@ nav {
     width: 1012px;
     height: 111px;
     margin: 0 auto;
+    margin-top: 50px;
     border-bottom: 1px solid #dddddd;
     padding-bottom: 5px;
 }
@@ -89,14 +90,13 @@ nav {
     width: 270px;
     z-index: 1;
     top: 10px;
-    right: 12px;
+    right: 10px;
 }
 
 .side-menu-title {
     background-color: #FFF;
     width: 270px;
     height: 67px;
-    cursor: pointer;
     padding: 12px 0 0 25px;
 }
 
@@ -124,7 +124,7 @@ nav {
 }
 
 .side-menu-ul {
-    max-height: 187px;
+    max-height: 157px;
     overflow: auto;
     list-style-type: none;
     background-color: #FFF;
@@ -135,7 +135,7 @@ nav {
 .side-bar-type-icon_1 {
     width: 35px;
     height: 29px;
-    margin-left: 10px;
+    /*margin-left: 10px;*/
     margin-right: 15px;
     display: block;
     float: left;
@@ -145,7 +145,7 @@ nav {
 .side-bar-type-icon_2 {
     width: 31px;
     height: 29px;
-    margin-left: 13px;
+    margin-left: 4px;
     margin-right: 20px;
     display: block;
     float: left;
@@ -155,7 +155,7 @@ nav {
 .side-bar-type-icon_3 {
     width: 31px;
     height: 29px;
-    margin-left: 13px;
+    margin-left: 2px;
     margin-right: 21px;
     float: left;
     background: transparent url("../img/museum.png") no-repeat scroll 0% 0%;
@@ -164,7 +164,7 @@ nav {
 .side-bar-type-icon_4 {
     width: 23px;
     height: 28px;
-    margin-left: 19px;
+    margin-left: 7px;
     margin-right: 24px;
     display: block;
     float: left;
@@ -229,8 +229,8 @@ nav {
 }
 
 .side-menu-ul-white-li {
-    padding: 10px;
-    height: 46px;
+    padding: 5px 10px;
+    height: 39px;
 }
 
 .side-menu-ul-anchor {
@@ -241,14 +241,6 @@ nav {
 .side-menu-ul-anchor:hover {
     text-decoration: none;
     color: #121212;
-}
-
-.colapsable-uls-hidden {
-    display: none;
-}
-
-.colapsable-uls {
-    display: block;
 }
 
 .logo-one {
@@ -393,11 +385,17 @@ nav {
     margin-left: 10px;
     float: left;
     background: transparent url("../img/location.png") no-repeat scroll 0% 0%;
-
 }
 
 .map-text-a:hover {
     text-decoration: none;
+}
+
+#clear-filter {
+    padding: 6px 26px;
+    background-color: #000;
+    color: #FFF;
+    cursor: pointer;
 }
 
 .load-more {
@@ -498,8 +496,8 @@ nav {
 
 .footer-ul-2 {
     padding: 0;
-    width: 230px;
-    margin-left: 331px;    
+    width: 63px;
+    margin-left: 381px;    
     display: inline-block;
 }
 
@@ -541,6 +539,30 @@ nav {
     background: transparent url("../img/pinteres.png") no-repeat scroll 0% 0%;
 }
 
+.team-info-wrapper {
+    overflow: hidden;
+    margin-bottom: 80px;
+}
+
+.team-info-picture {
+    float: left;
+    max-width: 190px;
+}
+
+.team-info-text {
+    float: left;
+    width: 792px;
+    margin-left: 30px;
+}
+
+.team-email {
+    color: #C41644;
+}
+
+.team-info-text > p:first-child {
+    font-weight: bold;
+}
+
 .subscribe-span {
     width: 510px;
     height: 56px;
@@ -555,13 +577,12 @@ nav {
     padding: 3px;
 }
 
-.submit-btn {
-    border: none;
-    color: #FFF;
-    width: 180px;
-    margin-top: 20px;
-    padding: 5px 0;
-    background-color: #c41644;
+#mc-embedded-subscribe {
+    border: none !important;
+    color: #FFF !important;
+    width: 180px !important;
+    border-radius: 0 !important;
+    background-color: #c41644 !important;
 }
 
 .subscribe-img {
@@ -585,7 +606,7 @@ nav {
 }
 
 .subsrcibe-form {
-    width: 180px;
+    width: 186px;
     margin-left: 141px;
     margin-bottom: 50px;
 }
@@ -607,7 +628,8 @@ nav {
     min-height: 264px;
     width: 480px;
     margin-bottom: 20px;
-    margin-right: 62px;
+    margin-right: 60px;
+    padding: 2px;
     float: left;
 }
 
@@ -637,6 +659,7 @@ nav {
 }
 
 .small-section-p2 {
+    display: none;
     margin-left: 197px;
 }
 
@@ -650,19 +673,19 @@ nav {
 
 .small-section-p4 {
     margin-top: 10px;
+    word-wrap: break-word;
     font-style: italic;
 }
 
 .inner-page-big-title {
     color: #d72c53;
     margin-top: 0;
-    padding: 0 0 15px 0;
 }
 
 .inner-page-smaller-title {
     color: #d72c53;
     margin-top: 0;
-    padding: 15px 15px 15px 0;
+    padding: 10px 0;
 }
 
 .anchor-wrapper {
@@ -679,7 +702,7 @@ nav {
 
 .location-wrapper {
     height: 38px;
-    margin: 15px 15px 15px 0;
+    margin: 10px 0;
 }
 
 .location-text {
@@ -693,9 +716,8 @@ nav {
 .object-text {
     color: #161616;
     font-style: italic;
-    margin: 0;
-    padding-bottom: 20px;
-    padding: 15px 15px 15px 0;
+    margin: 10px 0 0 0;
+    padding-bottom: 15px;
     border-bottom: 1px solid #d1d1d1;
 }
 
@@ -716,7 +738,7 @@ nav {
 }
 
 .social-icons {
-    width: 175px;
+    width: 49px;
     padding-bottom: 10px;
     border-bottom: 1px dotted #d1d1d1;
 }
@@ -749,7 +771,7 @@ nav {
     width: 19px;
     height: 21px;
     display: inline-block;
-    margin-right: 15px;
+    /*margin-right: 15px;*/
     background: transparent url("../img/yt-black.png") no-repeat scroll 0% 0%;
 }
 
@@ -852,7 +874,7 @@ nav {
 
 #map {
     width: 100%;
-    height: 740px;
+    height: 645px;
 }
 
 .map-popup {
@@ -929,6 +951,10 @@ nav {
     overflow: auto;
 }
 
+.social-icons {
+    display: none;
+}
+
 .social-icons > a {
     text-decoration: none;
 }
@@ -938,8 +964,15 @@ nav {
 }
 
 .inner-page-big-img > iframe {
-    height: 370px;
+    height: 263px;
 }
+
+#mc_embed_signup input.email {
+    width: 100% !important;
+    border: none !important;
+    border-radius: 0 !important;
+}
+
 
 
 

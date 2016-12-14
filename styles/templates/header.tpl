@@ -16,31 +16,18 @@
 		<meta property="og:{$tagname}" content="{$tag}">
 		{/foreach}
 	{/if}
-
-	<link rel="shortcut icon" href="img/favicon.ico"/>
-	<link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
-	<link rel='shortcut icon' type='image/x-icon' href='img/favicon.png' />
+	<link rel='shortcut icon' type='image/x-icon' href='img/favicon.ico' />
 	<link href="{$_config.base_url}/favicon.ico" rel="SHORTCUT ICON">
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">	
-	
+	<link rel="stylesheet" type="text/css" href="/styles/main.css" />
 	{if $css1}<link href="{$css1}" rel="stylesheet" type="text/css" />{/if}
 	{if $css2}<link href="{$css2}" rel="stylesheet" type="text/css" />{/if}
 	{if $css3}<link href="{$css3}" rel="stylesheet" type="text/css" />{/if}
 	{if $css4}<link href="{$css4}" rel="stylesheet" type="text/css" />{/if}
 	{if $css5}<link href="{$css5}" rel="stylesheet" type="text/css" />{/if}
 	<script language="javascript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-
 	<script language="javascript" type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-
-	<link href="/styles/lightbox.css" rel="stylesheet">
-	<script src="/styles/lightbox.js"></script>
-
 	<script language="javascript" type="text/javascript" src="/styles/main.js"></script>
-
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" rel="stylesheet">
-
-	<link rel="stylesheet" type="text/css" href="/styles/main.css" />
-	
 	{if $js1}<script language="javascript" type="text/javascript" src="{$js1}"></script>{/if}
 	{if $js2}<script language="javascript" type="text/javascript" src="{$js2}"></script>{/if}
 	{if $js3}<script language="javascript" type="text/javascript" src="{$js3}"></script>{/if}
@@ -50,9 +37,7 @@
 	{if $js7}<script language="javascript" type="text/javascript" src="{$js7}"></script>{/if}
 	{if $js8}<script language="javascript" type="text/javascript" src="{$js8}"></script>{/if}
 	{if $js9}<script language="javascript" type="text/javascript" src="{$js9}"></script>{/if}
-	<script type="text/javascript" src="/styles/freewall.js"></script>
-	<script type="text/javascript" src="/styles/index.js"></script>
-	
+
 </head>
 <body>
 {capture name=back_url}{query_str full_request_uri=true}{/capture}
@@ -62,36 +47,3 @@
 
 </header>
 <section class="main">
-
-	<body>
-	    <!-- <div class="top-wrapper">
-	      <div class="inner-holder">
-	        <span>
-	          <a href="https://www.facebook.com/groups/293085604125345/" class="top-icon-one" target="_blank"></a>
-	        </span>
-	        <span>
-	          <a href="https://www.youtube.com/watch?v=inWSHeG3TZo&list=UUZSsguINde1y3lV0hAAVIHQ" class="top-icon-two" target="_blank"></a>
-	        </span>
-	        <span>
-	          <a href="http://www.findatreasure.eu/" class="top-text">HOME</a>
-	        </span>
-	      </div>
-	    </div> -->
-
-	    <div class="top-logo-wrapper">
-	      <span>
-	        <a href="http://www.findatreasure.eu/">
-	        	<img src="/img/logo-full.png" class="img-responsive floating-logo">
-	        </a>
-	      </span>
-	      <span>
-	        <a href="http://www.findatreasure.eu/map.php">
-	        	<img src="/img/middle-logo.png" class="img-responsive floating-logo-2">
-	        </a>
-	      </span>
-	      <span>
-	        <a href="http://www.cys.bg/" target="_blank">
-	        	<img src="/img/cys.png" class="img-responsive floating-logo-3">
-	        </a>
-	      </span>
-	    </div>

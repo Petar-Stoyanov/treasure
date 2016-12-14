@@ -1,10 +1,10 @@
 {include file="templates/header.tpl"}
 	{capture name=back_url}{query_str full_request_uri=true ln=''}{/capture}
 <nav>
-  <a href="http://treasure.ata48.com/about-the-project.php" class="nav-a">За проекта</a>
-  <a href="http://treasure.ata48.com/team.php" class="nav-a">Екип</a>
-  <a href="http://treasure.ata48.com/followers.php" class="nav-a">Съмишленици</a>
-  <a href="http://treasure.ata48.com/support-the-cause.php" class="nav-a">Подкрепи каузата</a>
+  <a href="http://www.findatreasure.eu/about-the-project.php" class="nav-a">За проекта</a>
+  <a href="http://www.findatreasure.eu/team.php" class="nav-a">Екип</a>
+  <a href="http://www.findatreasure.eu/followers.php" class="nav-a">Съмишленици</a>
+  <a href="http://www.findatreasure.eu/support-the-cause.php" class="nav-a">Подкрепи каузата</a>
 </nav>
 
 <div class="static-pages-picture-title">

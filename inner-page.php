@@ -25,7 +25,7 @@ switch ($FILTER['mode']) {
 function show(&$FILTER, $errs = array()) {
 	global $PAGE_TITLE, $_cache, $mm, $_config;
 
-$object = $FILTER['object'];
+	$object = $FILTER['object'];
 
 	$museum = $mm->SelAssoc("SELECT t.seo_url, t.id, a.name_bg as area, ty.name as type, t.name, t.description as description, hp.name as historical_period, t.main_pic_id, t.seo_url, t.video_url, t.address, t.working_time, t.first_rel_place_id, t.second_rel_place_id  FROM treasure as t
 								LEFT JOIN area as a ON area_id=a.id
@@ -34,9 +34,15 @@ $object = $FILTER['object'];
 								WHERE seo_url='{$object}' AND t.is_deleted=0 ORDER BY t.sorting_weight ASC");
 
 	$museum = $museum[$object];
+	if($museum['video_url'] == "няма"){
+		$museum['video_url'] = NULL;
+	}
 
-	$gallery = $mm->SelAssoc("SELECT picture_id from treasure_have_picture WHERE treasure_id={$museum['id']}");
-	$museum['gallery'] = $gallery;
+	if(isset($museum['id'])){
+		$gallery = $mm->SelAssoc("SELECT picture_id from treasure_have_picture WHERE treasure_id={$museum['id']}");
+	
+		$museum['gallery'] = $gallery;
+	}
 
 	if($museum['first_rel_place_id']){
 		$first_rel_place_id = $museum['first_rel_place_id'];

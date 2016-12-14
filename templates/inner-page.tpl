@@ -9,7 +9,7 @@
         <div class="inner-page-top-content-holder">
           <div class="inner-page-big-img">
 		{if !isset($FILTER.museum.video_url)}
-			<img src="./upload_images/treasure_picture_{$FILTER.museum.main_pic_id}.jpg" alt="" class="img-responsive cont-pic-3"/>
+			<img src="../upload_images/treasure_picture_{$FILTER.museum.main_pic_id}.jpg" alt="" class="img-responsive cont-pic-3"/>
             		<!-- <img src="img/test-picture.png" class="img-responsive cont-pic-3"/>-->
 		{else}
 			<iframe width="100%" height="auto" src="{$FILTER.museum.video_url}" frameborder="0" allowfullscreen></iframe>
@@ -27,7 +27,7 @@
               <div class="location-text">{$FILTER.museum.type}</div>
             </div>
 
-            <p class="object-text">Исторически обект</p>
+            <p class="object-text">{$FILTER.museum.historical_period}</p>
 
             <div class="address-wrapper">
               <div class="inner-page-adress-holder">
@@ -46,21 +46,21 @@
                 <span class="social-icons-i1"></span>
               </a>
 
-              <a href="">
+              <!-- <a href="">
                 <span class="social-icons-i2"></span>
-              </a>
+              </a> -->
 
-              <a href="">
+              <!-- <a href="">
                 <span class="social-icons-i3"></span>
-              </a>
+              </a> -->
 
               <a href="">
                 <span class="social-icons-i4"></span>
               </a>
 
-              <a href="">
+              <!-- <a href="">
                 <span class="social-icons-i5"></span>
-              </a>
+              </a> -->
             </div>
 
           </div>
@@ -121,10 +121,11 @@
   	  	      <img class="inner-page-small-pic" src="../upload_images/treasure_picture_{$FILTER.museum.first_related_place.picture_id}.jpg">
             	<h3 class="small-section-h">{$FILTER.museum.first_related_place.name}</h3>
             </a>
-            <p class="small-section-p1">{$FILTER.museum.first_related_place.area}</p>
-            <p class="small-section-p2">{$FILTER.museum.first_related_place.type}</p>
+            <!-- <p class="small-section-p1">{$FILTER.museum.first_related_place.area}</p> -->
+            <!-- <p class="small-section-p2">{$FILTER.museum.first_related_place.type}</p> -->
           </div>
           <p class="small-section-p4" id="suggestion-location1">{$FILTER.museum.first_related_place.description}</p>
+          <button class="see-more-one">Виж повече</button>
         </div>
 	{/if}
 	{if isset($FILTER.museum.second_related_place)}
@@ -134,10 +135,11 @@
   	  	      <img class="inner-page-small-pic" src="../upload_images/treasure_picture_{$FILTER.museum.second_related_place.picture_id}.jpg">
             	<h3 class="small-section-h">{$FILTER.museum.second_related_place.name}</h3>
             </a>
-            <p class="small-section-p1">{$FILTER.museum.second_related_place.area}</p>
-            <p class="small-section-p2">{$FILTER.museum.second_related_place.type}</p>
+            <!-- <p class="small-section-p1">{$FILTER.museum.second_related_place.area}</p> -->
+            <!-- <p class="small-section-p2">{$FILTER.museum.second_related_place.type}</p> -->
           </div>
           <p class="small-section-p4" id="suggestion-location2">{$FILTER.museum.second_related_place.description}</p>
+          <button class="see-more-two">Виж повече</button>
         </div>
 	{/if}
 <!--        <div class="small-section-wrapper">
