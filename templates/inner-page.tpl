@@ -31,13 +31,13 @@
 
             <div class="address-wrapper">
               <div class="inner-page-adress-holder">
-                <span>Адрес:</span>
-                <span>{$FILTER.museum.name}</span>
+                <div>Адрес:</div>
+                <div>{$FILTER.museum.address}</div>
               </div>
 
               <div class="inner-page-time-holder">
-                <span>Работно време:</span>
-                <span>{$FILTER.museum.working_time}</span>
+                <div>Работно време:</div>
+                <div>{$FILTER.museum.working_time}</div>
               </div>
             </div>
 

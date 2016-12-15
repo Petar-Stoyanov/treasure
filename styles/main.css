@@ -722,6 +722,7 @@ nav {
 }
 
 .address-wrapper {
+    width: 600px;
     margin-bottom: 18px;
     padding: 15px 0;
     overflow: hidden;
@@ -730,11 +731,23 @@ nav {
 
 .inner-page-adress-holder {
     float: left;
+    width: 48%;
+}
+
+.inner-page-adress-holder > div:first-child {
+    margin-bottom: 5px;
+    font-weight: bold;
 }
 
 .inner-page-time-holder {
     float: right;
-    max-width: 400px;
+    width: 50%;
+    margin-left: 10px;
+}
+
+.inner-page-time-holder > div:first-child {
+    margin-bottom: 5px;
+    font-weight: bold;
 }
 
 .social-icons {
