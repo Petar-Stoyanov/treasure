@@ -23,7 +23,16 @@
             <h3 class="inner-page-smaller-title">{$FILTER.museum.area}</h3>
 
             <div class="location-wrapper">
-              <div class="location-icon"></div>
+              {if $FILTER.museum.type == 'Читалище'}
+                <div class="location-icon1"></div>
+              {elseif $FILTER.museum.type == 'Етнографска сбирка'}
+                <div class="location-icon2"></div>
+              {elseif $FILTER.museum.type == 'Музей'}
+                <div class="location-icon3"></div>
+              {else}
+                <div class="location-icon4"></div>
+              {/if}
+
               <div class="location-text">{$FILTER.museum.type}</div>
             </div>
 

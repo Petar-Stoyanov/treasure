@@ -90,7 +90,7 @@
 
       <div class="side-menu-ul-header-li">населено място</div>
 
-      <ul class="side-menu-ul">
+      <ul class="side-menu-ul side-menu-ul-2">
         <!-- <li class="side-menu-ul-header-li">населено място</li> -->
         {counter start=0 skip=1 assign="count"}
         {foreach from=$FILTER.area item=area}

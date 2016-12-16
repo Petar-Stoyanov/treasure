@@ -96,8 +96,8 @@ nav {
 .side-menu-title {
     background-color: #FFF;
     width: 270px;
-    height: 67px;
-    padding: 12px 0 0 25px;
+    height: 48px;
+    padding: 3px 0 0 25px;
 }
 
 .side-menu-ul-header-li {
@@ -124,7 +124,7 @@ nav {
 }
 
 .side-menu-ul {
-    max-height: 157px;
+    max-height: 188px;
     overflow: auto;
     list-style-type: none;
     background-color: #FFF;
@@ -132,10 +132,21 @@ nav {
     margin-bottom: 0;
 }
 
+.side-menu-ul-2 {
+    max-height: 181px;
+}
+
+.see-more-one,.see-more-two {
+    border: none;
+    background-color: #C41644;
+    color: #FFF;
+    padding: 5px 20px;
+    margin-top: 10px;
+}
+
 .side-bar-type-icon_1 {
-    width: 35px;
-    height: 29px;
-    /*margin-left: 10px;*/
+    width: 23px;
+    height: 35px;
     margin-right: 15px;
     display: block;
     float: left;
@@ -143,29 +154,26 @@ nav {
 }
 
 .side-bar-type-icon_2 {
-    width: 31px;
-    height: 29px;
-    margin-left: 4px;
-    margin-right: 20px;
+    width: 23px;
+    height: 35px;
+    margin-right: 15px;
     display: block;
     float: left;
     background: transparent url("../img/gathering.png") no-repeat scroll 0% 0%;
 }
 
 .side-bar-type-icon_3 {
-    width: 31px;
-    height: 29px;
-    margin-left: 2px;
-    margin-right: 21px;
+    width: 23px;
+    height: 35px;
+    margin-right: 15px;
     float: left;
     background: transparent url("../img/museum.png") no-repeat scroll 0% 0%;
 }
 
 .side-bar-type-icon_4 {
     width: 23px;
-    height: 28px;
-    margin-left: 7px;
-    margin-right: 24px;
+    height: 35px;
+    margin-right: 15px;
     display: block;
     float: left;
     background: transparent url("../img/library.png") no-repeat scroll 0% 0%;
@@ -224,13 +232,22 @@ nav {
     width: 178px;
 }*/
 
+.side-menu-ul-text-4 {
+    padding-top: 6px;
+}
+
 .side-menu-ul-text {
     margin-left: 10px;
 }
 
 .side-menu-ul-white-li {
-    padding: 5px 10px;
-    height: 39px;
+    padding: 6px 10px;
+    height: 47px;
+}
+
+.catch-li-click-2,.catch-li-click-3 {
+    padding: 8px 10px;
+    height: 38px;
 }
 
 .side-menu-ul-anchor {
@@ -399,6 +416,7 @@ nav {
 }
 
 .load-more {
+    display: none;
     background-color: #211f1e;
     padding: 10px 15px;
     border: none;
@@ -608,7 +626,7 @@ nav {
 .subsrcibe-form {
     width: 186px;
     margin-left: 141px;
-    margin-bottom: 50px;
+    margin-bottom: 10px;
 }
 
 .inner-page-h {
@@ -692,12 +710,32 @@ nav {
     min-height: 130px;
 }
 
-.location-icon {
-    width: 35px;
-    height: 29px;
-    margin-top: 4px;
+.location-icon1 {
+    width: 22px;
+    height: 35px;
     float: left;
-    background: transparent url("../img/building.png") no-repeat scroll 0% 0%;
+    background: transparent url("../img/small-building.png") no-repeat scroll 0% 0%;
+}
+
+.location-icon2 {
+    width: 22px;
+    height: 35px;
+    float: left;
+    background: transparent url("../img/gathering.png") no-repeat scroll 0% 0%;
+}
+
+.location-icon3 {
+    width: 22px;
+    height: 35px;
+    float: left;
+    background: transparent url("../img/museum.png") no-repeat scroll 0% 0%;
+}
+
+.location-icon4 {
+    width: 22px;
+    height: 35px;
+    float: left;
+    background: transparent url("../img/library.png") no-repeat scroll 0% 0%;
 }
 
 .location-wrapper {
@@ -887,7 +925,7 @@ nav {
 
 #map {
     width: 100%;
-    height: 645px;
+    height: 670px;
 }
 
 .map-popup {
