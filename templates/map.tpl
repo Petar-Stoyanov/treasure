@@ -116,7 +116,7 @@
   </div> -->
 
   <div id="map"></div>
-
+      
     {literal}
       <script>
 
@@ -172,6 +172,7 @@
                 arr.push(element.name);
                 arr.push(element.x);
                 arr.push(element.y);
+                arr.push(element.type);
                 markers.push(arr);
 
                 // var info = '<div class="info_content">';
@@ -243,7 +244,7 @@
           var infoWindowContent = [];
           $.ajax({
               url: reqUrl,
-              success: function(result){
+              success: function(result) {
                 var rs = JSON.parse(result);
 
                 $.each(rs, function(index, element){
@@ -251,6 +252,7 @@
                   arr.push(element.name);
                   arr.push(element.x);
                   arr.push(element.y);
+                  arr.push(element.type);
                   markers.push(arr);
 
                   // var info = '<div class="info_content">';
@@ -307,53 +309,33 @@
 
           var infoWindow = new google.maps.InfoWindow(), marker, i;
 
-          var icons = {
-            chitalishte: {
-              icon: 'img/small-building.png'
-            },
-            ethnoGathering: {
-              icon: 'img/gathering.png'
-            },
-            museum: {
-              icon: 'img/museum.png'
-            },
-            library: {
-              icon: 'img/library.png'
-            }
-          }
+          var features = ['img/small-building.png', 'img/gathering.png', 'img/museum.png', 'img/library.png'];
 
           for( i = 0; i < markers.length; i++ ) {
             var position = new google.maps.LatLng(markers[i][1], markers[i][2]);
 
             bounds.extend(position);
 
-            marker = new google.maps.Marker({
-              position: position,
-              map: map,
-              animation: google.maps.Animation.DROP,
-              title: markers[i][0]
-              // icon: icons[features.type].icon
+            features.forEach(function(feature) {
+              // put different icon for specific type of object
+              if(markers[i][3] == "Музей") {
+                feature = features[2];
+              } else if(markers[i][3] == "Библиотека") {
+                feature = features[3];
+              } else if(markers[i][3] == "Читалище") {
+                feature = features[0];
+              } else {
+                feature = features[1];
+              }
+
+              marker = new google.maps.Marker({
+                position: position,
+                map: map,
+                animation: google.maps.Animation.DROP,
+                title: markers[i][0],
+                icon: feature
+              });
             });
-
-            // var features = [
-            //   {
-            //     // position: position,
-            //     type: 'chitalishte'
-            //   }, {
-            //     // position: position,
-            //     type: 'ethnoGathering'
-            //   }, {
-            //     // position: position,
-            //     type: 'museum'
-            //   }, {
-            //     // position: position,
-            //     type: 'library'
-            //   }
-            // ];
-
-            // for (var i = 0, feature; feature = features[i]; i++) {
-            //   addMarker(feature);
-            // };
 
             // Allow each marker to have an info window    
             google.maps.event.addListener(marker, 'click', (function(marker, i) {
@@ -372,6 +354,7 @@
             google.maps.event.removeListener(boundsListener);
           });
         }
+
       </script>
     {/literal}
     
