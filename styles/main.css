@@ -415,6 +415,14 @@ nav {
     cursor: pointer;
 }
 
+#clear-filter > a {
+    color: #FFF;
+}
+
+#clear-filter > a:hover {
+    text-decoration: none;
+}
+
 .load-more {
     display: none;
     background-color: #211f1e;

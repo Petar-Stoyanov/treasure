@@ -9,7 +9,9 @@
       <div class="side-menu-icon"></div>
     </div>
 
-    <div id="clear-filter" class="btn-default">ИЗЧИСТИ ФИЛТЪР</div>
+    <div id="clear-filter" class="btn-default">
+      <a href="http://www.findatreasure.eu/map.php">ИЗЧИСТИ ФИЛТЪР</a>
+    </div>
 
     <div>
       <div class="side-menu-ul-header-li">ВИДОВЕ ОБЕКТИ</div>
@@ -153,9 +155,9 @@
           setAndChange(false);
         });
 
-        $('#clear-filter').click(function(){
-          setAndChange(true);
-        });
+        // $('#clear-filter').click(function(){
+        //   setAndChange(true);
+        // });
 
         var reqUrl = location.protocol + '//' + window.location.hostname + '/ajaxrequest.php';
 
