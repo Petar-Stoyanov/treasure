@@ -610,6 +610,14 @@ nav {
     margin-top: 17px;
 }
 
+.followers-titles {
+    color: #c41644;
+}
+
+.followers-titles:nth-child(4) {
+    margin-top: 60px;
+}
+
 .reserved {
     float: right;
     margin-top: 15px;
