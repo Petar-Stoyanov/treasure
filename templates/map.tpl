@@ -304,6 +304,9 @@
             }
           });
 
+          // uncomment for dissabling the zoom on mousewheel
+          // map.setOptions({ scrollwheel: false });
+
           var bounds = new google.maps.LatLngBounds();
           // var mapOptions = {
           //     mapTypeId: 'roadmap'
