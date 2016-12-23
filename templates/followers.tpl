@@ -4,7 +4,7 @@
   <a href="http://www.findatreasure.eu/about-the-project.php" class="nav-a">За проекта</a>
   <a href="http://www.findatreasure.eu/team.php" class="nav-a">Екип</a>
   <a href="http://www.findatreasure.eu/followers.php" class="nav-a">Съмишленици</a>
-  <a href="http://www.findatreasure.eu/support-the-cause.php" class="nav-a">Подкрепи каузата</a>
+  <a href="http://www.findatreasure.eu/contact.php" class="nav-a">Контакти</a>
 </nav>
 
 <div class="static-pages-picture-title">

@@ -501,7 +501,8 @@ nav {
 
 .footer-ul {
     padding: 0;
-    width: 455px;
+    width: 318px;
+    margin: 0 455px 0 59px;
     display: inline-block;    
 }
 
@@ -522,8 +523,7 @@ nav {
 
 .footer-ul-2 {
     padding: 0;
-    width: 63px;
-    margin-left: 381px;    
+    width: 63px; 
     display: inline-block;
 }
 
@@ -1038,6 +1038,11 @@ nav {
     width: 100% !important;
     border: none !important;
     border-radius: 0 !important;
+}
+
+.static-page-section-content > iframe {
+    height: 1100px;
+    width: 100%;
 }
 
 

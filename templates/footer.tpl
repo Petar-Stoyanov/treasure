@@ -10,11 +10,11 @@
 		        <li class="footer-li">
 		          <a href="http://www.findatreasure.eu/followers.php" class="footer-a">Съмишленици |</a>
 		        </li>
-		        <li class="footer-li">
+		        <!-- <li class="footer-li">
 		          <a href="http://www.findatreasure.eu/support-the-cause.php" class="footer-a">Подкрепи каузата |</a>
-		        </li>
+		        </li> -->
 		        <li class="footer-li">
-		          <a href="" class="footer-a">Контакти</a>
+		          <a href="http://www.findatreasure.eu/contact.php" class="footer-a">Контакти</a>
 		        </li>
 		      </ul>
 
